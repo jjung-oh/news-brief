@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>출근길 뉴스 브리핑</title>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--text:#1d1d1b;--sub:#6b6a66;--line:#e4e2dc;--accent:#c2410c;--chip:#fbe9df;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#212120;--text:#efede8;--sub:#a3a19b;--line:#33332f;--accent:#fb923c;--chip:#3a2a1f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#161615;--card:#212120;--text:#efede8;--sub:#a3a19b;--line:#33332f;--accent:#fb923c;--chip:#3a2a1f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.6}
+main{max-width:640px;margin:0 auto;padding:20px 16px 110px}
+h1{font-size:22px;margin:4px 0 2px}
+.date{color:var(--sub);font-size:14px;margin-bottom:14px}
+.notice{background:var(--chip);border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:16px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+button{font:inherit;color:var(--text);cursor:pointer}
+.tab{flex:1;padding:10px;border:1px solid var(--line);background:var(--card);border-radius:10px;font-size:15px}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.tl{font-size:13px;color:var(--sub);margin:0 0 10px}
+.empty{color:var(--sub);font-size:14px;padding:24px 0;text-align:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.card.playing{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.head{display:flex;gap:8px;align-items:flex-start;padding:14px}
+.tg{flex:1;text-align:left;background:none;border:0;padding:0}
+.cat{display:inline-block;font-size:12px;color:var(--accent);background:var(--chip);border-radius:6px;padding:1px 8px;margin-bottom:6px}
+.tg h2{font-size:16px;margin:0 0 6px}
+.tg p{margin:0;color:var(--sub);font-size:14px}
+.more{font-size:12px;color:var(--accent);margin-top:6px;display:block}
+.spk{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--bg);font-size:17px}
+.detail{display:none;padding:0 14px 14px;border-top:1px dashed var(--line);font-size:14px}
+.card.open .detail{display:block}
+.detail h3{font-size:13px;color:var(--sub);margin:12px 0 4px}
+.detail ul{margin:0;padding-left:18px}
+.kw span{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:12px;padding:0 8px;margin:0 4px 4px 0;color:var(--sub)}
+.src{font-size:12px;color:var(--sub)}
+.lk a{display:inline-block;font-size:13px;color:var(--accent);margin-right:12px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;align-items:center;justify-content:center;z-index:5}
+.bar button{padding:12px 14px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:15px}
+.bar .main{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.bar select{font:inherit;font-size:14px;padding:11px 6px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+</style>
+</head>
+<body>
+<main>
+<h1>📰 출근길 뉴스 브리핑</h1>
+<div class="date" id="date"></div>
+<div class="notice">⚠️ 기사는 <b>샘플 문구</b>입니다. 카드를 눌러 자세히 보고, 🔊로 들어보세요.</div>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" id="t0" aria-selected="false">어제 저녁</button>
+<button class="tab" role="tab" id="t1" aria-selected="true">오늘 아침</button>
+</div>
+<p class="tl" id="tl"></p>
+<div id="list"></div>
+</main>
+<div class="bar">
+<button class="main" id="all">▶ 전체 듣기</button>
+<button id="pp">⏸</button>
+<button id="stop">■</button>
+<select id="rate" aria-label="재생 속도"><option value="0.9">0.9x</option><option value="1" selected>1.0x</option><option value="1.2">1.2x</option><option value="1.5">1.5x</option></select>
+</div>
+<script>
+var cats=["정치","경제","사회","국제","날씨"];
+function mk(tag){return cats.map(function(c){return{c:c,h:c+" 핵심 헤드라인 자리 ("+tag+")",s:"여기에 AI가 만든 두세 문장 요약이 들어갑니다. 무슨 일이 있었고 왜 중요한지를 짧게 정리합니다.",pts:["무슨 일이 있었는지 핵심 사실 1","배경과 맥락 설명 2","앞으로 예상되는 흐름 3"],kw:[c,"키워드A","키워드B"],src:"KBS · MBC · SBS"}})}
+var DATA=[{label:"전날 18:00–24:00 기사 기준",items:mk("저녁")},{label:"당일 05:00–09:00 기사 기준",items:mk("아침")}];
+
+var tab=1,queue=[],qi=-1,CH=[],ci=0,paused=false,tok=0,wl=null,TTS="speechSynthesis" in window;
+var d=new Date(),y=new Date(d.getTime()-864e5),w=["일","월","화","수","목","금","토"];
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+$("date").textContent=d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 ("+w[d.getDay()]+")";
+try{var r=localStorage.getItem("rate");if(r)$("rate").value=r}catch(e){}
+
+function render(){
+  var base=tab==0?y:d,items=DATA[tab].items;
+  $("t0").setAttribute("aria-selected",tab==0);$("t1").setAttribute("aria-selected",tab==1);
+  $("tl").textContent=(base.getMonth()+1)+"월 "+base.getDate()+"일 · "+DATA[tab].label;
+  if(!items.length){$("list").innerHTML='<div class="empty">이 시간대에 수집된 기사가 없습니다.</div>';return}
+  $("list").innerHTML=items.map(function(n,i){
+    var lk=(n.links&&n.links.length)?'<h3>원문 보기</h3><div class="lk">'+n.links.map(function(l){return'<a href="'+esc(l.u)+'" target="_blank" rel="noopener noreferrer">'+esc(l.s)+' ↗</a>'}).join("")+'</div>':"";
+    return '<div class="card" id="c'+i+'"><div class="head"><button class="tg" data-i="'+i+'"><span class="cat">'+esc(n.c)+'</span><h2>'+esc(n.h)+'</h2><p>'+esc(n.s)+'</p><span class="more">자세히 보기 ▾</span></button>'+
+    (TTS?'<button class="spk" data-s="'+i+'" aria-label="듣기">🔊</button>':'')+'</div>'+
+    '<div class="detail"><h3>핵심 포인트</h3><ul>'+(n.pts||[]).map(function(p){return'<li>'+esc(p)+'</li>'}).join("")+'</ul><h3>키워드</h3><div class="kw">'+(n.kw||[]).map(function(k){return'<span>#'+esc(k)+'</span>'}).join("")+'</div><h3>출처</h3><div class="src">'+esc(n.src)+'</div>'+lk+'</div></div>';
+  }).join("");
+}
+
+/* ---- 듣기: 문장 단위로 끊어 읽기(안드로이드 크롬/삼성 인터넷 호환) ---- */
+function text(n){return n.c+" 소식입니다. "+n.h+". "+n.s+" "+(n.pts||[]).join(". ")}
+function chunks(s){return (s.match(/[^.!?。]+[.!?。]*\s*/g)||[s]).map(function(x){return x.trim()}).filter(Boolean)}
+function mark(i){[].forEach.call(document.querySelectorAll(".card"),function(c,k){c.classList.toggle("playing",k===i)})}
+function lock(){try{if(navigator.wakeLock)navigator.wakeLock.request("screen").then(function(l){wl=l}).catch(function(){})}catch(e){}}
+function unlock(){try{if(wl){wl.release();wl=null}}catch(e){}}
+function loadCard(k){
+  if(k>=queue.length){stop();return false}
+  qi=k;ci=0;CH=chunks(text(DATA[tab].items[queue[k]]));mark(queue[k]);return true;
+}
+function say(){
+  if(paused||qi<0)return;
+  if(ci>=CH.length){if(loadCard(qi+1))say();return}
+  var my=++tok;
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(CH[ci]);
+  u.lang="ko-KR";u.rate=parseFloat($("rate").value);
+  var v=speechSynthesis.getVoices().filter(function(x){return x.lang&&x.lang.replace("_","-").toLowerCase().indexOf("ko")==0})[0];
+  if(v)u.voice=v;
+  u.onend=function(){if(my===tok&&!paused){ci++;say()}};
+  u.onerror=function(){if(my===tok&&!paused){ci++;say()}};
+  speechSynthesis.speak(u);
+}
+function start(list){stop();if(!TTS||!list.length)return;queue=list;lock();if(loadCard(0))say()}
+function stop(){tok++;paused=false;qi=-1;queue=[];CH=[];if(TTS)speechSynthesis.cancel();mark(-1);unlock();$("pp").textContent="⏸"}
+$("list").addEventListener("click",function(e){
+  var s=e.target.closest("[data-s]");
+  if(s){start([+s.dataset.s]);return}
+  var t=e.target.closest(".tg");
+  if(t){var c=$("c"+t.dataset.i);var o=c.classList.toggle("open");c.querySelector(".more").textContent=o?"접기 ▴":"자세히 보기 ▾"}
+});
+$("t0").onclick=function(){stop();tab=0;render()};
+$("t1").onclick=function(){stop();tab=1;render()};
+$("all").onclick=function(){start(DATA[tab].items.map(function(_,i){return i}))};
+$("pp").onclick=function(){
+  if(!TTS||qi<0)return;
+  if(paused){paused=false;$("pp").textContent="⏸";say()}
+  else{paused=true;tok++;speechSynthesis.cancel();$("pp").textContent="▶"}
+};
+$("stop").onclick=stop;
+$("rate").onchange=function(){try{localStorage.setItem("rate",$("rate").value)}catch(e){}};
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible"&&qi>=0&&!paused)lock()});
+if(!TTS)document.querySelector(".bar").style.display="none";
+render();
+</script>
+</body>
+</html>
