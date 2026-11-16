@@ -29,8 +29,9 @@ STORE = BASE / "store.json"
 TEMPLATE = BASE / "news-brief.html"
 OUT_JSON = BASE / "news.json"
 OUT_HTML = BASE / "docs" / "index.html"
-# Gemini 무료 구간에서 쓸 수 있는 Flash 계열 모델. 안 되면 AI Studio의 모델 목록에서 이름을 확인해 GEMINI_MODEL로 바꾸세요.
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+# 모델은 자동으로 고릅니다(아래 init_models). 직접 지정하려면 환경변수 GEMINI_MODEL을 설정하세요.
+MODELS = []
+MIDX = 0
 MAX_STORIES = 8      # 구간당 카드 수
 PER_STORY = 3        # 이야기 하나당 읽을 기사 수
 BODY_CHARS = 1800    # 기사당 본문 최대 글자 수
@@ -95,14 +96,43 @@ def windows(now):
     ]
 
 
+def init_models(client):
+    """이 API 키로 실제 사용 가능한 Flash 모델을 조회해 안정 버전·최신 버전 순으로 정렬합니다."""
+    global MODELS
+    forced = os.environ.get("GEMINI_MODEL")
+    if forced:
+        MODELS = [forced]
+        print("지정된 모델:", forced)
+        return
+    found = []
+    for m in client.models.list():
+        name = (m.name or "").replace("models/", "")
+        acts = getattr(m, "supported_actions", None)
+        if acts and "generateContent" not in acts:
+            continue
+        mt = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash(-preview[\w-]*)?", name)
+        if mt:
+            found.append((0 if mt.group(2) else 1, float(mt.group(1)), name))
+    found.sort(reverse=True)
+    MODELS = [n for _, _, n in found]
+    print("사용 가능한 Flash 모델(우선순위):", MODELS)
+    if not MODELS:
+        raise RuntimeError("사용 가능한 Gemini Flash 모델을 찾지 못했습니다.")
+
+
 def ask_json(client, prompt, max_tokens=None):
-    """Gemini에 JSON으로 답하게 요청. 무료 구간의 429(요청 한도) 오류는 기다렸다가 재시도합니다."""
+    """Gemini에 JSON으로 답하게 요청. 모델이 없거나 무료 한도가 0이면 다음 모델로, 일시 한도(429)는 기다렸다 재시도."""
+    global MIDX
+    if not MODELS:
+        init_models(client)
     last = None
-    for wait in (0, 30, 60, 90):
-        time.sleep(wait)
+    attempts = 0
+    while attempts < 4:
+        if attempts:
+            time.sleep(30 * attempts)
         try:
             resp = client.models.generate_content(
-                model=MODEL,
+                model=MODELS[MIDX],
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json", temperature=0.3
@@ -113,7 +143,15 @@ def ask_json(client, prompt, max_tokens=None):
             return json.loads(text)
         except Exception as e:
             last = e
-            print(f"[재시도] Gemini 호출 실패: {e}")
+            msg = str(e)
+            print(f"[재시도] Gemini 호출 실패({MODELS[MIDX]}): {msg[:300]}")
+            if ("NOT_FOUND" in msg or "limit: 0" in msg) and MIDX < len(MODELS) - 1:
+                MIDX += 1
+                print(f"[모델 변경] {MODELS[MIDX]}")
+                continue
+            if "NOT_FOUND" in msg or "API key" in msg or "PERMISSION_DENIED" in msg:
+                raise
+            attempts += 1
     raise last
 
 
