@@ -3,7 +3,7 @@ name: news-brief
 on:
   schedule:
     - cron: "5 * * * *"
-    - cron: "30 22 * * *"
+    - cron: "50 21 * * *"
   workflow_dispatch:
     inputs:
       mode:
@@ -27,7 +27,7 @@ jobs:
       - name: 실행 모드 결정
         id: m
         run: |
-          if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || [ "${{ github.event.inputs.mode }}" = "build" ]; then
+          if [ "${{ github.event.schedule }}" = "50 21 * * *" ] || [ "${{ github.event.inputs.mode }}" = "build" ]; then
             echo "mode=build" >> "$GITHUB_OUTPUT"
           else
             echo "mode=collect" >> "$GITHUB_OUTPUT"
