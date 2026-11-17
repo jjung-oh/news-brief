@@ -39,7 +39,7 @@ MAX_STORIES = 15     # 구간당 카드 수(늘리려면 숫자만 바꾸세요)
 PER_STORY = 3        # 이야기 하나당 읽을 기사 수
 BODY_CHARS = 1800    # 기사당 본문 최대 글자 수
 MAX_TITLES = 150     # 1단계에 보낼 최대 제목 수
-# 날씨 위치(기본: 대전). 바꾸려면 위도/경도/이름을 수정하세요.
+# 날씨 위치(기본: 경기도 광주시). 바꾸려면 위도/경도/이름을 수정하세요.
 WEATHER_NAME = os.environ.get("WEATHER_NAME", "경기 광주")
 WEATHER_LAT = float(os.environ.get("WEATHER_LAT", "37.4295"))
 WEATHER_LON = float(os.environ.get("WEATHER_LON", "127.2550"))
@@ -51,7 +51,7 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 
 # RSS 주소는 바뀔 수 있습니다. 경고가 뜨면 방송사 RSS 안내 페이지에서 새 주소로 교체하세요.
 FEEDS = [
-   ("KBS", "http://world.kbs.co.kr/rss/rss_enternews.htm?lang=k"),
+    ("KBS", "http://world.kbs.co.kr/rss/rss_enternews.htm?lang=k"),
     ("MBC", "http://imnews.imbc.com/rss/news/news_00.xml"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER"),
@@ -159,12 +159,13 @@ def ask_json(client, prompt, max_tokens=None):
         except Exception as e:
             last = e
             msg = str(e)
-            print(f"[재시도] Gemini 호출 실패({MODELS[MIDX]}): {msg[:300]}")
-            if ("NOT_FOUND" in msg or "limit: 0" in msg) and MIDX < len(MODELS) - 1:
+            daily = "PerDay" in msg or "per day" in msg   # 하루 무료 한도 초과(모델별로 따로 계산됨)
+            print(f"[재시도] Gemini 호출 실패({MODELS[MIDX]}): {msg[:200]}")
+            if ("NOT_FOUND" in msg or "limit: 0" in msg or daily) and MIDX < len(MODELS) - 1:
                 MIDX += 1
                 print(f"[모델 변경] {MODELS[MIDX]}")
                 continue
-            if "NOT_FOUND" in msg or "API key" in msg or "PERMISSION_DENIED" in msg:
+            if daily or "NOT_FOUND" in msg or "API key" in msg or "PERMISSION_DENIED" in msg:
                 raise
             attempts += 1
     raise last
@@ -427,8 +428,13 @@ def build():
         try:
             items = process_window(client, arts)
         except Exception as e:
-            print(f"[오류] {label} 요약 실패: {e}")
-            items = []
+            print(f"[오류] {label} 요약 실패: {str(e)[:300]}")
+            items = [{
+                "c": "알림", "h": "요약을 만들지 못했어요",
+                "s": "Gemini 무료 사용량이 부족하거나 일시적인 오류가 있었어요. 잠시 뒤 다시 실행해 주세요.",
+                "pts": ["Actions 로그의 [오류] 줄에서 자세한 원인을 볼 수 있어요"],
+                "kw": ["알림"], "src": "시스템",
+            }]
         data.append({"label": label, "items": items})
 
     weather = fetch_weather()
