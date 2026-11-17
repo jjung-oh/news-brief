@@ -3,10 +3,12 @@
 출근길 뉴스 브리핑 생성기 (개인용)
 
   python3 brief.py collect   # RSS 수집만 (store.json에 누적)
+  python3 brief.py build-if-needed   # 오늘 요약이 실패했을 때만 다시 만들기
   python3 brief.py build     # 수집 + 기사 본문 읽기 + Gemini 요약 + docs/index.html 생성
 
 준비: pip install -r requirements.txt  /  환경변수 GEMINI_API_KEY
 """
+import html as htmllib
 import json
 import math
 import os
@@ -35,7 +37,8 @@ OUT_HTML = BASE / "docs" / "index.html"
 # 모델은 자동으로 고릅니다(아래 init_models). 직접 지정하려면 환경변수 GEMINI_MODEL을 설정하세요.
 MODELS = []
 MIDX = 0
-PREFERRED = "gemini-2.5-flash"
+DEAD = set()          # 쓸 수 없는 모델(404, 하루 한도 소진 등)
+THINK_LOW = True      # 3.x 모델의 생각량을 낮춰 속도를 높임(지원 안 되면 자동으로 끔)
 TIME_LIMIT = 9 * 60   # 요약 전체에 허용하는 최대 시간(초). 넘으면 남은 작업은 건너뜁니다.
 DEADLINE = None
 MAX_STORIES = 10     # 구간당 카드 수(늘리려면 숫자만 바꾸세요. 많을수록 AI가 실패하기 쉽습니다)
@@ -65,7 +68,7 @@ FEEDS = [
 
 
 def strip_html(s):
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s or "")).strip()
+    return re.sub(r"\s+", " ", htmllib.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
 
 
 def load_store():
@@ -131,39 +134,49 @@ def init_models(client):
         acts = getattr(m, "supported_actions", None)
         if acts and "generateContent" not in acts:
             continue
-        mt = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash(-preview[\w-]*)?", name)
-        if mt:
-            found.append((0 if mt.group(2) else 1, float(mt.group(1)), name))
+        mt = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash(-lite)?(-preview[\w-]*)?", name)
+        if mt:   # 일반 Flash 먼저(안정판 > 최신), lite는 맨 뒤 예비용
+            found.append((0 if mt.group(2) else 1, 0 if mt.group(3) else 1, float(mt.group(1)), name))
     found.sort(reverse=True)
-    MODELS = [n for _, _, n in found]
-    if PREFERRED in MODELS:   # 새 모델은 무료 구간에서 504/429가 잦아, 검증된 모델을 먼저 씁니다
-        MODELS.remove(PREFERRED)
-        MODELS.insert(0, PREFERRED)
+    MODELS = [n for *_, n in found]
     print("사용 가능한 Flash 모델(우선순위):", MODELS)
     if not MODELS:
         raise RuntimeError("사용 가능한 Gemini Flash 모델을 찾지 못했습니다.")
 
 
-def ask_json(client, prompt, max_tokens=None):
-    """Gemini에 JSON으로 답하게 요청.
-    429(한도)·5xx(서버 혼잡)·모델 없음은 다음 모델로 바로 넘어가고, 마지막 모델이면 잠깐 기다렸다 재시도합니다."""
+def next_model():
+    """살아 있는 다음 모델로 이동(끝에 닿으면 처음으로). 없으면 False."""
     global MIDX
+    for _ in range(len(MODELS)):
+        MIDX = (MIDX + 1) % len(MODELS)
+        if MODELS[MIDX] not in DEAD:
+            return True
+    return False
+
+
+def ask_json(client, prompt, max_tokens=None):
+    """Gemini에 JSON으로 답하게 요청합니다.
+    - 모델이 없거나 하루 한도를 다 쓴 경우: 그 모델을 제외하고 다른 모델로
+    - 서버 혼잡(429/5xx): 모델을 돌려가며 기다렸다 다시 시도(최대 6번, 전체 제한 시간 안에서)"""
+    global THINK_LOW
     if not MODELS:
         init_models(client)
-    last = None
-    attempts = 0
-    while attempts < 3:
+    last, attempts = None, 0
+    while attempts < 6:
         if DEADLINE and time.time() > DEADLINE:
             raise RuntimeError("제한 시간(9분)을 넘겨 요약을 건너뜁니다.")
-        if attempts:
-            time.sleep(20 * attempts)
+        while MODELS[MIDX] in DEAD:
+            if not next_model():
+                raise RuntimeError("사용 가능한 Gemini 모델이 없습니다.")
         model = MODELS[MIDX]
         try:
             cfg = {"response_mime_type": "application/json", "temperature": 0.3}
             if max_tokens:
                 cfg["max_output_tokens"] = max_tokens
             if model.startswith("gemini-2.5"):
-                cfg["thinking_config"] = types.ThinkingConfig(thinking_budget=0)  # 생각 시간 끄기(빠르고 저렴)
+                cfg["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+            elif THINK_LOW and model.startswith("gemini-3") and "lite" not in model:
+                cfg["thinking_config"] = types.ThinkingConfig(thinking_level="LOW")
             resp = client.models.generate_content(
                 model=model, contents=prompt, config=types.GenerateContentConfig(**cfg)
             )
@@ -174,18 +187,22 @@ def ask_json(client, prompt, max_tokens=None):
             last = e
             msg = str(e)
             print(f"[재시도] Gemini 호출 실패({model}): {msg[:160]}")
-            fatal = "API key" in msg or "PERMISSION_DENIED" in msg
-            daily = "PerDay" in msg or "per day" in msg
-            switch = (not fatal) and any(k in msg for k in (
-                "NOT_FOUND", "limit: 0", "429", "RESOURCE_EXHAUSTED",
-                "500", "503", "504", "UNAVAILABLE", "DEADLINE_EXCEEDED", "INTERNAL"))
-            if switch and MIDX < len(MODELS) - 1:
-                MIDX += 1
-                print(f"[모델 변경] {MODELS[MIDX]}")
-                continue
-            if fatal or daily or "NOT_FOUND" in msg:
+            if "API key" in msg or "PERMISSION_DENIED" in msg:
                 raise
+            if THINK_LOW and "thinking" in msg.lower():
+                THINK_LOW = False
+                print("[설정] 생각량 낮춤 옵션을 끄고 다시 시도합니다.")
+                continue
+            if "NOT_FOUND" in msg or "limit: 0" in msg or "PerDay" in msg or "per day" in msg:
+                DEAD.add(model)
+                print(f"[모델 제외] {model}")
+                continue
             attempts += 1
+            if any(k in msg for k in ("429", "RESOURCE_EXHAUSTED", "500", "503", "504",
+                                      "UNAVAILABLE", "DEADLINE_EXCEEDED", "INTERNAL")):
+                next_model()
+                print(f"[모델 변경] {MODELS[MIDX]} (서버 혼잡 {attempts}/6)")
+            time.sleep(min(15 * attempts, 45))
     raise last
 
 
@@ -457,17 +474,28 @@ def headline_items(arts, n=12):
     out = []
     for a in sorted(arts, key=lambda a: a["ts"], reverse=True)[:n]:
         out.append({
-            "c": "뉴스", "h": a["title"],
-            "s": a["summary"] or "원문 링크에서 자세히 볼 수 있어요.",
+            "c": "뉴스", "h": htmllib.unescape(a["title"]),
+            "s": htmllib.unescape(a["summary"]) or "원문 링크에서 자세히 볼 수 있어요.",
             "pts": [], "kw": [a["source"]], "src": a["source"],
             "links": [{"s": a["source"], "u": a["link"]}],
         })
     return out
 
 
+def needs_build():
+    """오늘 요약이 이미 모두 성공했으면 False(재시도 실행을 건너뛰기 위함)."""
+    try:
+        old = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        today_s = datetime.now(KST).strftime("%Y-%m-%d")
+        return not (old[0].get("built") == today_s and all(w.get("ok") for w in old))
+    except Exception:
+        return True
+
+
 def build():
     store = collect()
     now = datetime.now(KST)
+    built = now.strftime("%Y-%m-%d")
     global DEADLINE
     DEADLINE = time.time() + TIME_LIMIT
     client = genai.Client(http_options=types.HttpOptions(timeout=60_000))  # 호출 1회 최대 60초
@@ -479,19 +507,22 @@ def build():
             if start <= datetime.fromisoformat(v["ts"]) < end
         ]
         print(f"{label}: 기사 {len(arts)}건 처리 중...")
+        ok = True
         try:
             items = process_window(client, arts)
         except Exception as e:
             print(f"[오류] {label} 요약 실패: {str(e)[:300]}")
+            ok = False
             items = [{
                 "c": "알림", "h": "AI 요약이 안 돼서 제목만 보여드려요",
                 "s": "Gemini 무료 사용량이 부족하거나 일시적인 오류가 있었어요. 아래는 요약 없이 모은 기사 제목이에요.",
                 "pts": ["Actions 로그의 [오류] 줄에서 자세한 원인을 볼 수 있어요"],
                 "kw": ["알림"], "src": "시스템",
             }] + headline_items(arts)
-        data.append({"label": label, "items": items})
+        data.append({"label": label, "items": items, "ok": ok})
 
-    today_s = now.strftime("%Y-%m-%d")
+    data[0]["built"] = built
+    today_s = built
     weather = fetch_weather()
     if weather:
         weather["date"] = today_s
@@ -527,5 +558,10 @@ if __name__ == "__main__":
         collect()
     elif mode == "build":
         build()
+    elif mode == "build-if-needed":
+        if needs_build():
+            build()
+        else:
+            print("오늘 요약이 이미 완성되어 있어 건너뜁니다.")
     else:
         print(__doc__)
