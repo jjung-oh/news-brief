@@ -51,7 +51,7 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 
 # RSS 주소는 바뀔 수 있습니다. 경고가 뜨면 방송사 RSS 안내 페이지에서 새 주소로 교체하세요.
 FEEDS = [
-    ("KBS", "http://world.kbs.co.kr/rss/rss_enternews.htm?lang=k"),
+   ("KBS", "http://world.kbs.co.kr/rss/rss_enternews.htm?lang=k"),
     ("MBC", "http://imnews.imbc.com/rss/news/news_00.xml"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER"),
