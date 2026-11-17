@@ -408,6 +408,8 @@ def weather_openmeteo():
                  "precipitation_probability_max,precipitation_sum,wind_speed_10m_max",
         "hourly": "temperature_2m,precipitation_probability",
     }).json()
+    if "daily" not in w:
+        raise RuntimeError(w.get("reason", "날씨 서버 응답 이상"))
     d, h = w["daily"], w["hourly"]
     return make_card(
         WMO.get(d["weather_code"][0], "변화 있음"),
@@ -429,11 +431,25 @@ def fetch_weather():
             print(f"[경고] 기상청 예보 실패, Open-Meteo로 대체합니다: {e}")
     else:
         print("KMA_API_KEY가 없어 Open-Meteo 날씨를 사용합니다.")
+    for i in range(3):
+        try:
+            return weather_openmeteo()
+        except Exception as e:
+            print(f"[경고] 날씨 정보 실패({i + 1}/3): {e}")
+            time.sleep(3 * (i + 1))
+    return None
+
+
+def old_weather(today_s):
+    """오늘 이미 만들어 둔 날씨 카드가 있으면 재사용합니다(날씨 서버가 잠깐 막혔을 때 대비)."""
     try:
-        return weather_openmeteo()
-    except Exception as e:
-        print(f"[경고] 날씨 정보 실패: {e}")
-        return None
+        old = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        for it in old[1]["items"]:
+            if it.get("c") == "날씨" and it.get("date") == today_s and it.get("pts"):
+                return it
+    except Exception:
+        pass
+    return None
 
 
 def headline_items(arts, n=12):
@@ -475,9 +491,17 @@ def build():
             }] + headline_items(arts)
         data.append({"label": label, "items": items})
 
+    today_s = now.strftime("%Y-%m-%d")
     weather = fetch_weather()
     if weather:
-        data[1]["items"].insert(0, weather)
+        weather["date"] = today_s
+    else:
+        weather = old_weather(today_s) or {
+            "c": "날씨", "h": "날씨 정보를 가져오지 못했어요",
+            "s": "날씨 서버가 잠시 응답하지 않았어요. 다음 실행 때 다시 가져올게요.",
+            "pts": [], "kw": ["날씨"], "src": "시스템",
+        }
+    data[1]["items"].insert(0, weather)
 
     OUT_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
