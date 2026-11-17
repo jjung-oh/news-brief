@@ -35,9 +35,10 @@ OUT_HTML = BASE / "docs" / "index.html"
 # 모델은 자동으로 고릅니다(아래 init_models). 직접 지정하려면 환경변수 GEMINI_MODEL을 설정하세요.
 MODELS = []
 MIDX = 0
+PREFERRED = "gemini-2.5-flash"
 TIME_LIMIT = 9 * 60   # 요약 전체에 허용하는 최대 시간(초). 넘으면 남은 작업은 건너뜁니다.
 DEADLINE = None
-MAX_STORIES = 15     # 구간당 카드 수(늘리려면 숫자만 바꾸세요)
+MAX_STORIES = 10     # 구간당 카드 수(늘리려면 숫자만 바꾸세요. 많을수록 AI가 실패하기 쉽습니다)
 PER_STORY = 3        # 이야기 하나당 읽을 기사 수
 BODY_CHARS = 1800    # 기사당 본문 최대 글자 수
 MAX_TITLES = 150     # 1단계에 보낼 최대 제목 수
@@ -135,13 +136,17 @@ def init_models(client):
             found.append((0 if mt.group(2) else 1, float(mt.group(1)), name))
     found.sort(reverse=True)
     MODELS = [n for _, _, n in found]
+    if PREFERRED in MODELS:   # 새 모델은 무료 구간에서 504/429가 잦아, 검증된 모델을 먼저 씁니다
+        MODELS.remove(PREFERRED)
+        MODELS.insert(0, PREFERRED)
     print("사용 가능한 Flash 모델(우선순위):", MODELS)
     if not MODELS:
         raise RuntimeError("사용 가능한 Gemini Flash 모델을 찾지 못했습니다.")
 
 
 def ask_json(client, prompt, max_tokens=None):
-    """Gemini에 JSON으로 답하게 요청. 모델이 없거나 무료 한도가 0이면 다음 모델로, 일시 한도(429)는 기다렸다 재시도."""
+    """Gemini에 JSON으로 답하게 요청.
+    429(한도)·5xx(서버 혼잡)·모델 없음은 다음 모델로 바로 넘어가고, 마지막 모델이면 잠깐 기다렸다 재시도합니다."""
     global MIDX
     if not MODELS:
         init_models(client)
@@ -152,13 +157,15 @@ def ask_json(client, prompt, max_tokens=None):
             raise RuntimeError("제한 시간(9분)을 넘겨 요약을 건너뜁니다.")
         if attempts:
             time.sleep(20 * attempts)
+        model = MODELS[MIDX]
         try:
+            cfg = {"response_mime_type": "application/json", "temperature": 0.3}
+            if max_tokens:
+                cfg["max_output_tokens"] = max_tokens
+            if model.startswith("gemini-2.5"):
+                cfg["thinking_config"] = types.ThinkingConfig(thinking_budget=0)  # 생각 시간 끄기(빠르고 저렴)
             resp = client.models.generate_content(
-                model=MODELS[MIDX],
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json", temperature=0.3
-                ),
+                model=model, contents=prompt, config=types.GenerateContentConfig(**cfg)
             )
             text = (resp.text or "").strip()
             text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text)
@@ -166,13 +173,17 @@ def ask_json(client, prompt, max_tokens=None):
         except Exception as e:
             last = e
             msg = str(e)
-            daily = "PerDay" in msg or "per day" in msg   # 하루 무료 한도 초과(모델별로 따로 계산됨)
-            print(f"[재시도] Gemini 호출 실패({MODELS[MIDX]}): {msg[:200]}")
-            if ("NOT_FOUND" in msg or "limit: 0" in msg or daily) and MIDX < len(MODELS) - 1:
+            print(f"[재시도] Gemini 호출 실패({model}): {msg[:160]}")
+            fatal = "API key" in msg or "PERMISSION_DENIED" in msg
+            daily = "PerDay" in msg or "per day" in msg
+            switch = (not fatal) and any(k in msg for k in (
+                "NOT_FOUND", "limit: 0", "429", "RESOURCE_EXHAUSTED",
+                "500", "503", "504", "UNAVAILABLE", "DEADLINE_EXCEEDED", "INTERNAL"))
+            if switch and MIDX < len(MODELS) - 1:
                 MIDX += 1
                 print(f"[모델 변경] {MODELS[MIDX]}")
                 continue
-            if daily or "NOT_FOUND" in msg or "API key" in msg or "PERMISSION_DENIED" in msg:
+            if fatal or daily or "NOT_FOUND" in msg:
                 raise
             attempts += 1
     raise last
@@ -215,14 +226,17 @@ def process_window(client, arts):
 
     # 1단계: 제목만 보고 중요한 이야기 고르기
     lines = "\n".join(f"{i}. [{a['source']}] {a['title']}" for i, a in enumerate(arts, 1))
-    picked = ask_json(
-        client, PICK_PROMPT.format(n=MAX_STORIES, k=PER_STORY, lines=lines), 2000
-    )["stories"]
+    res = ask_json(client, PICK_PROMPT.format(n=MAX_STORIES, k=PER_STORY, lines=lines), 3000)
+    picked = res.get("stories", []) if isinstance(res, dict) else res   # 목록으로 와도 처리
     stories = []
     for s in picked[:MAX_STORIES]:
+        if not isinstance(s, dict):
+            continue
         ids = [i for i in s.get("ids", []) if isinstance(i, int) and 1 <= i <= len(arts)]
         if ids:
             stories.append({"c": s.get("c", ""), "arts": [arts[i - 1] for i in ids[:PER_STORY]]})
+    if not stories:
+        raise RuntimeError("AI가 고른 기사가 없습니다.")
 
     # 2단계: 고른 기사 본문만 가져오기
     urls = [a["link"] for st in stories for a in st["arts"]]
@@ -237,9 +251,11 @@ def process_window(client, arts):
             parts.append(f"[{a['source']}] {a['title']}\n본문: {body}")
         blocks.append("\n".join(parts))
 
-    items = ask_json(
-        client, SUM_PROMPT.format(m=len(stories), blocks="\n\n".join(blocks)), 6000
-    )["items"]
+    res = ask_json(
+        client, SUM_PROMPT.format(m=len(stories), blocks="\n\n".join(blocks)), 16000
+    )
+    items = res.get("items", []) if isinstance(res, dict) else res
+    items = [it for it in items if isinstance(it, dict)]
 
     # 원문 링크는 AI가 아니라 스크립트가 직접 붙입니다(링크 변조 방지).
     if len(items) == len(stories):
@@ -420,6 +436,19 @@ def fetch_weather():
         return None
 
 
+def headline_items(arts, n=12):
+    """AI 없이 최신 기사 제목만으로 카드를 만듭니다(요약 실패 시 대비)."""
+    out = []
+    for a in sorted(arts, key=lambda a: a["ts"], reverse=True)[:n]:
+        out.append({
+            "c": "뉴스", "h": a["title"],
+            "s": a["summary"] or "원문 링크에서 자세히 볼 수 있어요.",
+            "pts": [], "kw": [a["source"]], "src": a["source"],
+            "links": [{"s": a["source"], "u": a["link"]}],
+        })
+    return out
+
+
 def build():
     store = collect()
     now = datetime.now(KST)
@@ -439,11 +468,11 @@ def build():
         except Exception as e:
             print(f"[오류] {label} 요약 실패: {str(e)[:300]}")
             items = [{
-                "c": "알림", "h": "요약을 만들지 못했어요",
-                "s": "Gemini 무료 사용량이 부족하거나 일시적인 오류가 있었어요. 잠시 뒤 다시 실행해 주세요.",
+                "c": "알림", "h": "AI 요약이 안 돼서 제목만 보여드려요",
+                "s": "Gemini 무료 사용량이 부족하거나 일시적인 오류가 있었어요. 아래는 요약 없이 모은 기사 제목이에요.",
                 "pts": ["Actions 로그의 [오류] 줄에서 자세한 원인을 볼 수 있어요"],
                 "kw": ["알림"], "src": "시스템",
-            }]
+            }] + headline_items(arts)
         data.append({"label": label, "items": items})
 
     weather = fetch_weather()
