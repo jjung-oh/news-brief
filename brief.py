@@ -35,6 +35,8 @@ OUT_HTML = BASE / "docs" / "index.html"
 # 모델은 자동으로 고릅니다(아래 init_models). 직접 지정하려면 환경변수 GEMINI_MODEL을 설정하세요.
 MODELS = []
 MIDX = 0
+TIME_LIMIT = 9 * 60   # 요약 전체에 허용하는 최대 시간(초). 넘으면 남은 작업은 건너뜁니다.
+DEADLINE = None
 MAX_STORIES = 15     # 구간당 카드 수(늘리려면 숫자만 바꾸세요)
 PER_STORY = 3        # 이야기 하나당 읽을 기사 수
 BODY_CHARS = 1800    # 기사당 본문 최대 글자 수
@@ -51,8 +53,8 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 
 # RSS 주소는 바뀔 수 있습니다. 경고가 뜨면 방송사 RSS 안내 페이지에서 새 주소로 교체하세요.
 FEEDS = [
-    ("KBS", "http://world.kbs.co.kr/rss/rss_enternews.htm?lang=k"),
-    ("MBC", "http://imnews.imbc.com/rss/news/news_00.xml"),
+    ("KBS", "https://news.kbs.co.kr/rss/rss.xml"),
+    ("MBC", "https://imnews.imbc.com/rss/news/news_00.xml"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER"),
     ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER"),
@@ -75,13 +77,16 @@ def collect():
     store = load_store()
     now = datetime.now(KST)
     for source, url in FEEDS:
+        print(f"수집 중: {source}", flush=True)
         try:
-            feed = feedparser.parse(url, agent=UA)
-        except Exception as e:
-            print(f"[경고] {source} 수집 실패: {e}")
+            r = requests.get(url, headers={"User-Agent": UA}, timeout=15)   # 응답이 없으면 15초 뒤 포기
+            feed = feedparser.parse(r.content)
+            status = r.status_code
+        except Exception as e:  # 한 곳이 실패해도 계속 진행
+            print(f"[경고] {source} 수집 실패: {e} (주소={url})")
             continue
         if not feed.entries:
-            print(f"[경고] {source}: 기사를 가져오지 못했습니다. HTTP={feed.get('status')} 오류={feed.get('bozo_exception')} 주소={url}")
+            print(f"[경고] {source}: 기사를 가져오지 못했습니다. HTTP={status} 주소={url}")
         for e in feed.entries:
             link = e.get("link")
             if not link or link in store:
@@ -142,9 +147,11 @@ def ask_json(client, prompt, max_tokens=None):
         init_models(client)
     last = None
     attempts = 0
-    while attempts < 4:
+    while attempts < 3:
+        if DEADLINE and time.time() > DEADLINE:
+            raise RuntimeError("제한 시간(9분)을 넘겨 요약을 건너뜁니다.")
         if attempts:
-            time.sleep(30 * attempts)
+            time.sleep(20 * attempts)
         try:
             resp = client.models.generate_content(
                 model=MODELS[MIDX],
@@ -416,7 +423,9 @@ def fetch_weather():
 def build():
     store = collect()
     now = datetime.now(KST)
-    client = genai.Client()  # GEMINI_API_KEY 환경변수 사용
+    global DEADLINE
+    DEADLINE = time.time() + TIME_LIMIT
+    client = genai.Client(http_options=types.HttpOptions(timeout=60_000))  # 호출 1회 최대 60초
     data = []
     for label, start, end in windows(now):
         arts = [
@@ -459,6 +468,7 @@ def build():
 
 
 if __name__ == "__main__":
+    sys.stdout.reconfigure(line_buffering=True)
     mode = sys.argv[1] if len(sys.argv) > 1 else "build"
     if mode == "collect":
         collect()
