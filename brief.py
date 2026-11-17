@@ -8,13 +8,16 @@
 준비: pip install -r requirements.txt  /  환경변수 GEMINI_API_KEY
 """
 import json
+import math
 import os
 import re
 import sys
 import time
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import unquote
 from zoneinfo import ZoneInfo
 
 import feedparser
@@ -32,19 +35,30 @@ OUT_HTML = BASE / "docs" / "index.html"
 # 모델은 자동으로 고릅니다(아래 init_models). 직접 지정하려면 환경변수 GEMINI_MODEL을 설정하세요.
 MODELS = []
 MIDX = 0
-MAX_STORIES = 8      # 구간당 카드 수
+MAX_STORIES = 15     # 구간당 카드 수(늘리려면 숫자만 바꾸세요)
 PER_STORY = 3        # 이야기 하나당 읽을 기사 수
 BODY_CHARS = 1800    # 기사당 본문 최대 글자 수
 MAX_TITLES = 150     # 1단계에 보낼 최대 제목 수
+# 날씨 위치(기본: 대전). 바꾸려면 위도/경도/이름을 수정하세요.
+WEATHER_NAME = os.environ.get("WEATHER_NAME", "경기 광주")
+WEATHER_LAT = float(os.environ.get("WEATHER_LAT", "37.4295"))
+WEATHER_LON = float(os.environ.get("WEATHER_LON", "127.2550"))
+# 기사 시간대(한국 시간, 시 단위)
+EVENING_START = 18   # 어제 저녁: 전날 18시 ~ 24시
+MORNING_START = 0    # 오늘 아침: 당일 0시 ~ 7시
+MORNING_END = 7
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
 
 # RSS 주소는 바뀔 수 있습니다. 경고가 뜨면 방송사 RSS 안내 페이지에서 새 주소로 교체하세요.
-FEEDS = {
-    "KBS": "https://news.kbs.co.kr/rss/rss.xml",
-    "MBC": "https://imnews.imbc.com/rss/news/news_00.xml",
-    "SBS": "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER",
-    "JTBC": "https://fs.jtbc.co.kr/RSS/newsflash.xml",
-}
+FEEDS = [
+    ("KBS", "http://world.kbs.co.kr/rss/rss_enternews.htm?lang=k"),
+    ("MBC", "http://imnews.imbc.com/rss/news/news_00.xml"),
+    ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01&plink=RSSREADER"),
+    ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02&plink=RSSREADER"),
+    ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03&plink=RSSREADER"),
+    ("SBS", "https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=07&plink=RSSREADER"),
+    ("JTBC", "https://fs.jtbc.co.kr/RSS/newsflash.xml"),
+]
 
 
 def strip_html(s):
@@ -60,14 +74,14 @@ def load_store():
 def collect():
     store = load_store()
     now = datetime.now(KST)
-    for source, url in FEEDS.items():
+    for source, url in FEEDS:
         try:
             feed = feedparser.parse(url, agent=UA)
         except Exception as e:
             print(f"[경고] {source} 수집 실패: {e}")
             continue
         if not feed.entries:
-            print(f"[경고] {source}: 기사를 가져오지 못했습니다. RSS 주소를 확인하세요.")
+            print(f"[경고] {source}: 기사를 가져오지 못했습니다. HTTP={feed.get('status')} 오류={feed.get('bozo_exception')} 주소={url}")
         for e in feed.entries:
             link = e.get("link")
             if not link or link in store:
@@ -91,8 +105,9 @@ def windows(now):
     today = now.replace(hour=0, minute=0, second=0, microsecond=0)
     yday = today - timedelta(days=1)
     return [
-        ("전날 18:00–24:00 기사 기준", yday.replace(hour=18), today),
-        ("당일 05:00–09:00 기사 기준", today.replace(hour=5), today.replace(hour=9)),
+        (f"전날 {EVENING_START}:00–24:00 기사 기준", yday.replace(hour=EVENING_START), today),
+        (f"당일 {MORNING_START:02d}:00–{MORNING_END:02d}:00 기사 기준",
+         today.replace(hour=MORNING_START), today.replace(hour=MORNING_END)),
     ]
 
 
@@ -225,6 +240,178 @@ def process_window(client, arts):
     return items
 
 
+KMA_KEY = os.environ.get("KMA_API_KEY", "").strip()   # 선택: 기상청 공식 예보용 키
+KMA_URLS = [  # (주소, 키 파라미터 이름) - API허브 키와 공공데이터포털 키를 모두 시도합니다
+    ("https://apihub.kma.go.kr/api/typ02/openApi/VilageFcstInfoService_2.0/getVilageFcst", "authKey"),
+    ("https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst", "serviceKey"),
+]
+
+WMO = {
+    0: "맑음", 1: "대체로 맑음", 2: "구름 조금", 3: "흐림", 45: "안개", 48: "안개",
+    51: "약한 이슬비", 53: "이슬비", 55: "강한 이슬비", 56: "어는 이슬비", 57: "어는 이슬비",
+    61: "약한 비", 63: "비", 65: "강한 비", 66: "어는 비", 67: "어는 비",
+    71: "약한 눈", 73: "눈", 75: "강한 눈", 77: "싸락눈",
+    80: "약한 소나기", 81: "소나기", 82: "강한 소나기", 85: "눈 소나기", 86: "강한 눈 소나기",
+    95: "뇌우", 96: "우박 동반 뇌우", 99: "우박 동반 뇌우",
+}
+
+
+def grade(v, cuts):
+    if v is None:
+        return None
+    return "좋음" if v <= cuts[0] else "보통" if v <= cuts[1] else "나쁨" if v <= cuts[2] else "매우 나쁨"
+
+
+def latlon_to_grid(lat, lon):
+    """위도/경도 -> 기상청 동네예보 격자(nx, ny) (기상청 공개 변환식)."""
+    RE, GRID, SLAT1, SLAT2, OLON, OLAT, XO, YO = 6371.00877, 5.0, 30.0, 60.0, 126.0, 38.0, 43, 136
+    d = math.pi / 180.0
+    re_ = RE / GRID
+    s1, s2, ol, oa = SLAT1 * d, SLAT2 * d, OLON * d, OLAT * d
+    sn = math.log(math.cos(s1) / math.cos(s2)) / math.log(
+        math.tan(math.pi * 0.25 + s2 * 0.5) / math.tan(math.pi * 0.25 + s1 * 0.5))
+    sf = math.pow(math.tan(math.pi * 0.25 + s1 * 0.5), sn) * math.cos(s1) / sn
+    ro = re_ * sf / math.pow(math.tan(math.pi * 0.25 + oa * 0.5), sn)
+    ra = re_ * sf / math.pow(math.tan(math.pi * 0.25 + lat * d * 0.5), sn)
+    th = lon * d - ol
+    th = th - 2 * math.pi if th > math.pi else th + 2 * math.pi if th < -math.pi else th
+    th *= sn
+    return math.floor(ra * math.sin(th) + XO + 0.5), math.floor(ro - ra * math.cos(th) + YO + 0.5)
+
+
+def air_quality_line():
+    try:
+        aq = requests.get("https://air-quality-api.open-meteo.com/v1/air-quality", timeout=15, params={
+            "latitude": WEATHER_LAT, "longitude": WEATHER_LON, "timezone": "Asia/Seoul",
+            "forecast_days": 1, "hourly": "pm10,pm2_5"}).json()["hourly"]
+        pm10 = max([v for v in aq["pm10"][7:21] if v is not None], default=None)
+        pm25 = max([v for v in aq["pm2_5"][7:21] if v is not None], default=None)
+        g10, g25 = grade(pm10, (30, 80, 150)), grade(pm25, (15, 35, 75))
+        if g10 and g25:
+            return f"미세먼지 {g10}, 초미세먼지 {g25} (Open-Meteo 모델 예측치, 낮 시간 최대 기준)"
+    except Exception as e:
+        print(f"[경고] 미세먼지 정보 실패: {e}")
+    return None
+
+
+def make_card(desc, tmin, tmax, t8, t18, pop, rain_pt, wind, src):
+    tip = ("우산을 꼭 챙기세요." if pop >= 60 else
+           "혹시 모르니 우산을 챙기세요." if pop >= 30 else "우산은 필요 없겠습니다.")
+    sentence = (f"오늘 {WEATHER_NAME}은 {desc}, 최저 {tmin}도 최고 {tmax}도입니다. "
+                f"출근 시간대인 오전 8시에는 {t8}도입니다. 강수 확률은 최대 {pop}퍼센트로, {tip}")
+    pts = [
+        f"기온: 최저 {tmin}도, 최고 {tmax}도 (오전 8시 {t8}도, 오후 6시 {t18}도)",
+        f"강수: 확률 최대 {pop}퍼센트, {rain_pt}",
+        f"바람: 최대 풍속 약 {wind:.0f}미터" + (" — 바람이 강하니 주의하세요" if wind >= 9 else ""),
+    ]
+    if tmax - tmin >= 10:
+        pts.append(f"일교차가 {tmax - tmin}도로 큽니다. 겉옷을 챙기세요")
+    aq = air_quality_line()
+    if aq:
+        pts.append(aq)
+    return {"c": "날씨", "h": f"오늘 {WEATHER_NAME} 날씨 {desc}, 최저 {tmin}도 최고 {tmax}도",
+            "s": sentence, "pts": pts, "kw": [WEATHER_NAME, desc, "날씨"], "src": src}
+
+
+def weather_kma():
+    """기상청 단기예보(공식). 키가 필요합니다."""
+    now = datetime.now(KST)
+    nx, ny = latlon_to_grid(WEATHER_LAT, WEATHER_LON)
+    if now.hour < 2 or (now.hour == 2 and now.minute < 20):
+        bd, bt = (now - timedelta(days=1)).strftime("%Y%m%d"), "2300"
+    else:
+        bd, bt = now.strftime("%Y%m%d"), "0200"
+    items, errs = None, []
+    for url, keyname in KMA_URLS:
+        try:
+            r = requests.get(url, timeout=20, params={
+                keyname: unquote(KMA_KEY), "pageNo": 1, "numOfRows": 1500, "dataType": "JSON",
+                "base_date": bd, "base_time": bt, "nx": nx, "ny": ny})
+            try:
+                j = r.json()
+            except Exception:
+                raise RuntimeError(f"JSON 아님: {r.text[:150]}")
+            if j["response"]["header"]["resultCode"] != "00":
+                raise RuntimeError(j["response"]["header"].get("resultMsg", "오류"))
+            items = j["response"]["body"]["items"]["item"]
+            print(f"기상청 예보 사용: {url.split('/')[2]} (격자 {nx},{ny}, 기준 {bd} {bt})")
+            break
+        except Exception as e:
+            errs.append(f"{url.split('/')[2]}: {e}")
+    if items is None:
+        raise RuntimeError(" / ".join(errs))
+
+    today = now.strftime("%Y%m%d")
+    by = {}
+    for it in items:
+        if it["fcstDate"] == today:
+            by.setdefault(it["category"], {})[it["fcstTime"]] = it["fcstValue"]
+
+    def f(v):
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+
+    tmp = {t: f(v) for t, v in by.get("TMP", {}).items() if f(v) is not None}
+    tmin = f(next(iter(by.get("TMN", {}).values()), None))
+    tmax = f(next(iter(by.get("TMX", {}).values()), None))
+    tmin = round(tmin if tmin is not None else min(tmp.values()))
+    tmax = round(tmax if tmax is not None else max(tmp.values()))
+    t8, t18 = round(tmp["0800"]), round(tmp["1800"])
+    pop = int(max([f(v) or 0 for v in by.get("POP", {}).values()], default=0))
+    wind = max([f(v) or 0 for v in by.get("WSD", {}).values()], default=0)
+
+    pcp = [v for v in by.get("PCP", {}).values() if v and v != "강수없음"]
+    num = lambda v: float(re.search(r"[\d.]+", v).group()) if re.search(r"[\d.]+", v) else 0.0
+    rain_pt = ("시간당 최대 강수량 " + max(pcp, key=num).replace("mm", "밀리미터")) if pcp else "강수 없음"
+
+    pty = [v for v in by.get("PTY", {}).values() if v != "0"]
+    if pty:
+        desc = {"1": "비", "2": "비 또는 눈", "3": "눈", "4": "소나기", "5": "빗방울",
+                "6": "빗방울과 눈날림", "7": "눈날림"}.get(Counter(pty).most_common(1)[0][0], "강수")
+    else:
+        sky = [v for t, v in by.get("SKY", {}).items() if "0900" <= t <= "1800"] or list(by.get("SKY", {}).values())
+        desc = {"1": "맑음", "3": "구름 많음", "4": "흐림"}.get(Counter(sky).most_common(1)[0][0], "변화 있음")
+    return make_card(desc, tmin, tmax, t8, t18, pop, rain_pt, wind, "기상청 단기예보")
+
+
+def weather_openmeteo():
+    common = {"latitude": WEATHER_LAT, "longitude": WEATHER_LON, "timezone": "Asia/Seoul", "forecast_days": 1}
+    w = requests.get("https://api.open-meteo.com/v1/forecast", timeout=15, params={
+        **common,
+        "daily": "weather_code,temperature_2m_max,temperature_2m_min,"
+                 "precipitation_probability_max,precipitation_sum,wind_speed_10m_max",
+        "hourly": "temperature_2m,precipitation_probability",
+    }).json()
+    d, h = w["daily"], w["hourly"]
+    return make_card(
+        WMO.get(d["weather_code"][0], "변화 있음"),
+        round(d["temperature_2m_min"][0]), round(d["temperature_2m_max"][0]),
+        round(h["temperature_2m"][8]), round(h["temperature_2m"][18]),
+        d["precipitation_probability_max"][0] or 0,
+        f"예상 강수량 {(d['precipitation_sum'][0] or 0):.1f}밀리미터",
+        (d["wind_speed_10m_max"][0] or 0) / 3.6,
+        "Open-Meteo 예측 모델(기상청 공식 예보와 다를 수 있음)",
+    )
+
+
+def fetch_weather():
+    """KMA_API_KEY가 있으면 기상청 공식 예보, 없거나 실패하면 Open-Meteo로 대체합니다."""
+    if KMA_KEY:
+        try:
+            return weather_kma()
+        except Exception as e:
+            print(f"[경고] 기상청 예보 실패, Open-Meteo로 대체합니다: {e}")
+    else:
+        print("KMA_API_KEY가 없어 Open-Meteo 날씨를 사용합니다.")
+    try:
+        return weather_openmeteo()
+    except Exception as e:
+        print(f"[경고] 날씨 정보 실패: {e}")
+        return None
+
+
 def build():
     store = collect()
     now = datetime.now(KST)
@@ -243,6 +430,10 @@ def build():
             print(f"[오류] {label} 요약 실패: {e}")
             items = []
         data.append({"label": label, "items": items})
+
+    weather = fetch_weather()
+    if weather:
+        data[1]["items"].insert(0, weather)
 
     OUT_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
