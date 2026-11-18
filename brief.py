@@ -8,6 +8,7 @@
 
 준비: pip install -r requirements.txt  /  환경변수 GEMINI_API_KEY
 """
+import difflib
 import html as htmllib
 import json
 import math
@@ -18,6 +19,7 @@ import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
+from itertools import zip_longest
 from pathlib import Path
 from urllib.parse import unquote
 from zoneinfo import ZoneInfo
@@ -469,14 +471,45 @@ def old_weather(today_s):
     return None
 
 
-def headline_items(arts, n=12):
-    """AI 없이 최신 기사 제목만으로 카드를 만듭니다(요약 실패 시 대비)."""
+def sentences(text):
+    parts = re.split(r"(?<=[.!?])\s+", re.sub(r"\s+", " ", text or ""))
+    return [x.strip() for x in parts if len(x.strip()) >= 15]
+
+
+def pick_diverse(arts, n):
+    """방송사를 번갈아 가며 최신 기사부터 고르고, 제목이 비슷한 중복은 건너뜁니다."""
+    by = {}
+    for a in sorted(arts, key=lambda a: a["ts"], reverse=True):
+        by.setdefault(a["source"], []).append(a)
+    out, seen = [], []
+    for group in zip_longest(*by.values()):
+        for a in group:
+            if a is None:
+                continue
+            t = htmllib.unescape(a["title"])
+            if any(difflib.SequenceMatcher(None, t, x).ratio() > 0.6 for x in seen):
+                continue
+            seen.append(t)
+            out.append(a)
+            if len(out) >= n:
+                return out
+    return out
+
+
+def headline_items(arts, n=None):
+    """AI가 안 될 때의 대체: 기사 본문 앞부분을 그대로 요약처럼 보여줍니다(AI 없음)."""
+    chosen = pick_diverse(arts, n or MAX_STORIES)
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        bodies = list(ex.map(lambda a: fetch_body(a["link"]), chosen))
     out = []
-    for a in sorted(arts, key=lambda a: a["ts"], reverse=True)[:n]:
+    for a, body in zip(chosen, bodies):
+        sents = sentences(body)
+        lead = " ".join(sents[:2])[:220] if sents else htmllib.unescape(a["summary"])
         out.append({
             "c": "뉴스", "h": htmllib.unescape(a["title"]),
-            "s": htmllib.unescape(a["summary"]) or "원문 링크에서 자세히 볼 수 있어요.",
-            "pts": [], "kw": [a["source"]], "src": a["source"],
+            "s": lead or "원문 링크에서 자세히 볼 수 있어요.",
+            "pts": [x[:120] for x in sents[2:5]],
+            "kw": [a["source"]], "src": a["source"],
             "links": [{"s": a["source"], "u": a["link"]}],
         })
     return out
@@ -500,6 +533,7 @@ def build():
     DEADLINE = time.time() + TIME_LIMIT
     client = genai.Client(http_options=types.HttpOptions(timeout=60_000))  # 호출 1회 최대 60초
     data = []
+    ai_down = False
     for label, start, end in windows(now):
         arts = [
             {**v, "link": k}
@@ -509,13 +543,17 @@ def build():
         print(f"{label}: 기사 {len(arts)}건 처리 중...")
         ok = True
         try:
+            if ai_down and arts:
+                raise RuntimeError("Gemini 서버 혼잡이 이어져 AI 요약을 건너뜁니다(사용 가능한 모델 없음).")
             items = process_window(client, arts)
         except Exception as e:
             print(f"[오류] {label} 요약 실패: {str(e)[:300]}")
             ok = False
+            if any(k in str(e) for k in ("503", "504", "UNAVAILABLE", "DEADLINE", "429", "제한 시간", "사용 가능한", "혼잡")):
+                ai_down = True
             items = [{
-                "c": "알림", "h": "AI 요약이 안 돼서 제목만 보여드려요",
-                "s": "Gemini 무료 사용량이 부족하거나 일시적인 오류가 있었어요. 아래는 요약 없이 모은 기사 제목이에요.",
+                "c": "알림", "h": "AI 요약이 안 돼서 기사 앞부분을 보여드려요",
+                "s": "Gemini 서버가 혼잡하거나 사용량이 부족해요. 아래는 AI 없이 기사 본문의 앞부분을 그대로 가져온 거예요. 나중에 자동으로 다시 시도해요.",
                 "pts": ["Actions 로그의 [오류] 줄에서 자세한 원인을 볼 수 있어요"],
                 "kw": ["알림"], "src": "시스템",
             }] + headline_items(arts)
