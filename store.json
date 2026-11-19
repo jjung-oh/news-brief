@@ -1,16 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848664&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이 대통령 부부, 필리핀 전통의상 입고 아세안 갈라만찬",
-  "summary": "&#9650; 이재명 대통령과 김혜경 여사가 16일 필리핀 마닐라 필리핀국제컨벤션센터에서 페르디난드 로무알데스 마르코스 주니어 필리핀 대통령 부…",
-  "ts": "2026-11-16T22:41:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848663&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이 대통령, 한-필리핀 정상회담…\"조선·AI·원전 등 협력 확대\"",
-  "summary": "&#9650; 이재명 대통령과 페르디난드 로무알데스 마르코스 주니어 필리핀 대통령이 16일 필리핀 마닐라 필리핀국제컨벤션센터에서 열린 한&#12…",
-  "ts": "2026-11-16T22:37:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848707&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "국회 나온 교육장관…\"난 못 잡아내요. 나이 있어서\"",
@@ -106,24 +94,6 @@
   "title": "또 급락한 삼전닉스…젠슨 황과 앤트로픽 영향",
   "summary": "우리 증시는 또다시 급락했습니다.외국인들이 또 한 번 삼성전자와 SK하이닉스 주식을 대거 팔아치운 영향이 컸는데, 왜 그렇고 언제까지 이어질지,…",
   "ts": "2026-11-17T01:20:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848523&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "외국인 '팔자'에 삼전닉스 '뚝'…\"앤트로픽·엔비디아 영향\"",
-  "summary": "우리 증시는 오늘 또다시 급락했습니다. 외국인 투자자들이 삼성전자와 SK하이닉스 주식을 대거 팔아 치운 영향이 컸는데요.외국인 자금이 빠져 나가…",
-  "ts": "2026-11-16T22:14:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848521&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "초소형 카메라에 '삐삐' 울리지만…\"만능 해결책 아냐\"",
-  "summary": "그런데 이런 장치들은 현장에서 적발하면 되는 것 아니냐, 도대체 왜 못 잡는 건지 궁금해하실 텐데요. 대안으로 이야기가 가장 많이 나오는 게 전파탐지기입니다.도입하면 실제 효과가 있을지, 최승훈 기자가 취재했습니다.",
-  "ts": "2026-11-16T22:14:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848519&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"AI 안경이죠?\" 묻자 도망…\"막을 수 있다\"더니 '늑장' 조사",
-  "summary": "스마트 안경으로 국가자격시험에서 부정행위를 하다 적발된 사례가 어제까지 알려진 것보다 두 배나 많은 걸로 확인됐습니다. 올해 초부터 '부정행위를 막아달란' 민원이 이어졌지만, 시험을 주관하는 한국산업인력공단은 \"충분히 막을 수 있다\"고 자신해왔습니다.",
-  "ts": "2026-11-16T22:14:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849204&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -466,12 +436,6 @@
   "title": "트럼프 \"중국서 김정은 만날 수도…시진핑에 방중 달려\"",
   "summary": "&#9650; 트럼프, 김정은도널드 트럼프 미국 대통령이 내일부터 모레까지 중국 선전에서 열리는 APEC 정상회의 참석 계기에 김정은 북한 국무…",
   "ts": "2026-11-17T03:38:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008848678&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "요르단 이어 이라크도 텔레그램 차단…\"국가 안보 우려\"",
-  "summary": "&#9650; 메신저 앱 '텔레그램'극단주의 테러 조직 IS의 테러로 골머리를 앓아온 요르단과 이라크 당국이 국가 안보에 대한 우…",
-  "ts": "2026-11-16T23:20:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849395&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -4774,5 +4738,29 @@
   "title": "중국에 모인 '빅3 스트롱맨'…사상 첫 미중러 정상회담",
   "summary": "APEC 정상회담이 열리고 있는 중국 선전에서 트럼프 미국 대통령과 시진핑 중국 국가주석, 푸틴 러시아 대통령이 3자 회담을 가졌습니다. 미·중·러 정상이 한자리에 모여 세기의 담판을 벌인 건 세계 역사상 처음입니다.김영아 기자입니다.",
   "ts": "2026-11-19T20:58:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854717&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "'파친코' 작가 이민진의 '아메리칸 학원', 아마존 올해의 책 1위",
+  "summary": "▲ 아메리칸 학원한국계 미국인 작가 이민진의 신작 장편소설 '아메리칸 학원'이 세계 최대 온라인 서점 아마존이 발표하는…",
+  "ts": "2026-11-19T22:38:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854726&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미중러 사상 첫 정상회담·한중 FTA 타결…중국 선전 APEC 폐막",
+  "summary": "▲ 2026 중국 선전 APEC 정상 공식 기념 촬영아시아태평양 지역의 경제협력과 세계 주요국 정상외교의 무대가 된 아시아태평양경제협…",
+  "ts": "2026-11-19T23:04:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854721&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "대형원탁에 마주앉았지만…시진핑이 사실상 '가운데'",
+  "summary": "▲ 미중러 3자 정상회담미국·중국·러시아 정상의 사상 첫 3자 회담장에서는 대형 라운드테이블을 둘러싼 정상들의 자리 배치가 눈길을 끌…",
+  "ts": "2026-11-19T22:41:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854719&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프, 아시아 순방 마치고 귀국길…김정은과 회동 불발",
+  "summary": "▲ 미중러 회담 마치고 귀국길 오른 트럼프 대통령도널드 트럼프 미국 대통령이 19일 중국 선전에서 아시아태평양경제협력체 정상회의 참석…",
+  "ts": "2026-11-19T22:40:00+09:00"
  }
 }
