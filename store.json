@@ -1,16 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850708&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "'가민 페이' 국내 출시…대중교통·티머니 가맹점 결제",
-  "summary": "스마트폰이나 실물 카드 없이 스마트워치로 결제할 수 있는 간편결제 서비스가 확대되고 있습니다.글로벌 스마트 기기 업체 가민이 간편결제 서비스인 …",
-  "ts": "2026-11-18T07:44:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850924&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "새벽 인천 숙박업소서 화재…투숙객 60여 명 대피",
-  "summary": "&#9650; 119마크심야 시간대 인천 한 숙박업소에서 불이 나 투숙객 60여 명이 대피했습니다.오늘 새벽 3시 37분쯤 인천시 계양구 한 숙…",
-  "ts": "2026-11-18T07:47:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008851031&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "[정치쇼] 박정하 \"조작 징계 논란? 지저분해 보여…한동훈 복당? 증거 나오면 법적 수단도 강구해야\"",
@@ -22,78 +10,6 @@
   "title": "[속보] 당정 \"육사 충청권으로 이전…해사·공사 기존 위치 활용\"",
   "summary": "▲ 22일 국회 의원회관에서 열린 '3대 메가 프로젝트 지원 특별위원회'의 당정 협의당정 \"육사 충청권으로 이전…",
   "ts": "2026-11-18T08:45:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850923&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "청와대, '자바' 취약점 발견에 민·관·군 긴급회의…\"대응 전략 수립\"",
-  "summary": "▲ 청와대인터넷 웹사이트 프로그래밍 언어인 자바에서 치명적 보안 취약점이 발견된 것과 관련해 청와대가 민·관·군 긴급 대책 회의를 열…",
-  "ts": "2026-11-18T07:45:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850713&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "차량서 의식 잃은 운전자…비번 간호사가 살렸다",
-  "summary": "가족과 나들이를 가던 한 간호사가 도로에서 위급한 상황을 목격해 생명을 구했다고요?네, 부산 해운대백병원에서 근무하는 최지연 간호사의 이야기인데…",
-  "ts": "2026-11-18T08:08:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850712&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "길게 잡은 목줄에 걸려 쾅…자전거 타다 '전치 8주'",
-  "summary": "길게 늘어진 반려견 목줄 때문에 지나가던 자전거 운전자가 크게 다치는 일이 있었다고요?네, 50대 여성 A 씨는 지난해 10월 전남의 한 도로에…",
-  "ts": "2026-11-18T08:05:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850711&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "수능 앞두고 막겠다는데…\"추가 확보 중\" 품절 대란",
-  "summary": "AI 부정행위를 막기 위한 대책이 급히 쏟아지고 있지만 온라인에선 초소형 장비들이 품절될 정도로 잘 팔리고 있다면서요?네, 최근 한 온라인 커뮤…",
-  "ts": "2026-11-18T08:02:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850710&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "문신 남성들 두고 '의대 신입생'?…7년 뒤 의사 풍자",
-  "summary": "수능 이제 딱 하루 남았죠.AI를 이용한 시험 부정행위 논란이 계속되면서 이걸 풍자하는 게시물이 온라인에 쏟아지고 있다고요?네, 최근 한 대학생…",
-  "ts": "2026-11-18T08:25:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008851018&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "미국 곳곳 시스템 '먹통'…트럼프 \"괜찮다, 그게 인생\"",
-  "summary": "▲ 도널드 트럼프 미국 대통령도널드 트럼프 대통령은 미국에서 항공기 운항 중단을 비롯해 시스템 장애에 따른 사고가 빈번히 발생하는 데…",
-  "ts": "2026-11-18T08:39:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008851007&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "'인증샷 성지' 아래서…\"내가 왕\" 아동 매춘까지?",
-  "summary": "▲ 일본 오사카 도톤보리의 상징 글리코맨 광고판한국 관광객들 사이에서도 인증샷의 성지로 유명한 일본 오사카 도톤보리의 글리코 간판 주…",
-  "ts": "2026-11-18T08:33:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850984&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "젠슨황 없는 엔비디아, 폭발적 성장세…분기매출 155조 원",
-  "summary": "젠슨 황 전 최고경영자를 최근 잃은 엔비디아가 두 분기 연속으로 매출 증가율 100% 이상을 기록하는 등 폭발적인 성장세를 이어갔습니다.엔비디아…",
-  "ts": "2026-11-18T08:17:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850978&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"재선임 의사 없다\"…엔비디아 의장, '젠슨황 복귀' 일축",
-  "summary": "▲ 젠슨 황 전 엔비디아 CEO엔비디아 이사회는 17일 불륜 스캔들로 불명예 퇴진한 젠슨 황 전 최고경영자를 재선임하지 않겠다며 황 …",
-  "ts": "2026-11-18T08:14:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850717&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "올해 연말에도 대이동…섬 뒤덮은 '붉은 행렬'",
-  "summary": "한 해가 저물 무렵이면 어김없이 찾아오는 붉은 행렬이 있습니다.올해도 게 떼가 섬 전체를 뒤덮는 진풍경이 펼쳐졌는데, 바로 확인해 보시죠.도로 …",
-  "ts": "2026-11-18T08:04:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850716&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "아이 안고 나오던 여성 '쑥'…발밑으로 추락",
-  "summary": "한 여성이 아이를 안고 상점에서 나오는 순간 갑자기 발밑의 인도가 무너집니다.여성과 아이가 그대로 구덩이로 떨어지고, 지나가던 남성까지 속수무책…",
-  "ts": "2026-11-18T08:02:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850715&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "환영 인파 속 뜻밖의 사고…교황 얼굴에 '퍽'",
-  "summary": "레오 14세 교황이 남미 순방의 마지막 일정으로 페루를 방문해 신도들과 만났습니다.그런데 환영 인파 속에서 뜻밖의 사고가 벌어졌다고 하네요.페루…",
-  "ts": "2026-11-18T08:01:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008851100&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -4534,5 +4450,41 @@
   "title": "\"일 안 하고 쉴래\" 100만 명 육박…영국이 꺼낸 카드는?",
   "summary": "공부도, 일도 하지 않는 청년을 이른바 '니트족'이라고 부릅니다. 영국에서만 이 니트 청년들이 100만 명에 육박했습니다. 상황이 심각해지면서 영국 정부가 보고서를 발표했는데요.",
   "ts": "2026-11-21T07:31:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856710&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"이진우, 사망 당일 집 왔었다\"…이틀 전 집주인에 한 말",
+  "summary": "▲ 이진우 씨가 살던 빌라 건물법학적성시험 이진우 씨가 사망한 당일 새벽 자취방으로 돌아와 짐을 정리한 것으로 파악됐습니다.이 씨는 …",
+  "ts": "2026-11-21T08:29:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856712&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프 \"미중러 정상회담서 한반도 위험 대응 논의했다\"",
+  "summary": "▲ 백악관서 기자회견하는 도널드 트럼프 미국 대통령도널드 트럼프 미국 대통령이 중국 선전에서 열린 미·중·러 정상회담에서 시진핑 중국…",
+  "ts": "2026-11-21T08:35:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856698&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프 \"푸틴·시진핑과 환상적 관계\"…1시간 반 자화자찬 회견",
+  "summary": "▲ 백악관서 기자회견하는 도널드 트럼프 미국 대통령도널드 트럼프 미국 대통령이 아시아 순방을 마치고 귀국한 이튿날 장시간 기자회견을 열어 자신이 순방에서 '놀라운 성과'를 거뒀다고 자평했습니다.트럼프 대통령은 필리핀 마닐라에서 열린 아세안 정상회의와 중국 선전에서 열린 APEC 정상회의에서 나흘 동안 \"20명 넘는 세계 지도자들을 만났고, 2건의 새로운 무역 협정을 확보했으며, 약 10건의 다른 협정도 곧 나올 예정\"이라고 밝혔습니다.그는 순방 기간 \"4차례의 주요 국제 정상회의에 참석했고, 역내 전반에 걸친 미국의 동맹관계를 재확",
+  "ts": "2026-11-21T08:22:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856696&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"AI 클로드, 수학 최대 난제 리만 가설 증명\" 주장 나와",
+  "summary": "▲ 앤트로픽 클로드AI 기업 앤트로픽의 한 연구원이 이 회사의 AI 서비스 클로드로 수학계의 최대 난제 중 하나로 꼽히는 리만 가설을…",
+  "ts": "2026-11-21T08:18:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856691&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프, 젠슨 황 복귀 촉구…\"두 번째 기회 주어져야\"",
+  "summary": "▲ 젠슨 황 전 엔비디아 최고경영자와 도널드 트럼프 미국 대통령도널드 트럼프 미국 대통령이 최근 잇단 불륜 스캔들에 휩싸인 끝에 사임…",
+  "ts": "2026-11-21T08:12:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856640&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프 \"미중러 정상, '한반도' 관련 논의\"…'북핵' 다뤘나",
+  "summary": "이틀 전 중국에서 열린 미중러 3자 정상회담에서 북한 문제를 논의했다고 트럼프 미국 대통령이 밝혔습니다. 구체적으로 어떤 내용을 다뤘는지는 공개하지 않았는데, 3국 정상이 북핵 문제에 대한 의견을 교환했을 가능성이 거론됩니다.워싱턴 전병남 특파원입니다.",
+  "ts": "2026-11-21T08:30:00+09:00"
  }
 }
