@@ -1,52 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850640&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"부정행위는 중대범죄…무관용 원칙으로 엄정 대응\"",
-  "summary": "해외 순방 일정을 소화 중인 이재명 대통령이 현지에서 화상으로 수능 비상 점검회의를 열었습니다. 이 대통령은 첨단 정비를 이용한 부정행위는 성적…",
-  "ts": "2026-11-18T00:37:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850641&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[단독] \"계산기 직접 개조, 공범 없다\"…1년전부터 준비",
-  "summary": "올해 세무사 시험에서 AI를 이용한 부정행위를 시인한 수석 합격자 한모 씨가 어제 경찰에 출석해 조사를 받았습니다. 한 씨는 직접 개조한 계산기와 소형 모니터를 사용했고, 무려 1년 전부터 준비했다고 밝혔습니다.여현교 기자의 보도입니다.",
-  "ts": "2026-11-18T00:43:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850639&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "빗발치는 연기 요구에도 \"예정대로 내일 수능\"",
-  "summary": "정부의 추가 대책에도 수험생과 학부모들의 불안은 줄어들지 않고 있습니다. 수능을 연기해야 한다는 주장도 계속되고 있는데 교육 당국은 다시 한번 선을 그었습니다.보도에 정반석 기자입니다.",
-  "ts": "2026-11-18T00:34:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850638&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "단추마다 스티커…숨긴 폰에 '재난문자' 울린다",
-  "summary": "내일 수능시험을 앞두고 정부가 AI 부정행위를 막을 긴급 대책을 내놓았습니다. 옷 단추마다 스티커를 붙이고 위급 재난문자를 보내 숨겨 놓은 휴대…",
-  "ts": "2026-11-18T00:31:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850652&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "'AI 부정행위' 세무사 수석합격자, 13시간 경찰조사 후 귀가",
-  "summary": "&#9650; 부정행위를 자백한 세무사 시험 수석 합격자 한 모 씨초소형 카메라 등 장비와 인공지능을 이용해 제63회 세무사 시험에서 부정행위를…",
-  "ts": "2026-11-18T00:25:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850637&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "경북 상주서 규모 3.6 지진…올들어 가장 강해",
-  "summary": "&#9650; 경북 상주 북서쪽서 규모 3.6 지진 발생어젯밤 11시 10분 17초 경북 상주시 북서쪽 22&#13214; 지점에서 규모 3.6…",
-  "ts": "2026-11-18T00:14:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850617&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "경북 상주서 규모 3.6 지진 발생…\"올해 지진 중 가장 규모 커\"",
-  "summary": "&#9650; 경북 상주 북서쪽서 규모 3.6 지진 발생오늘 밤 11시 10분쯤 경북 상주시 북서쪽 22km 지역에서 규모 3.6의 지진이 발생…",
-  "ts": "2026-11-17T23:33:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850636&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이란 매체 \"게슘섬에서 잇단 폭발음…상공에선 연기 관측\"",
-  "summary": "이란 남부 연안에 있는 게슘섬 일대에서 원인을 알 수 없는 폭발음이 잇따라 들렸다고 파르스 통신이 현지시간 17일 보도했습니다.호르무즈 해협에 …",
-  "ts": "2026-11-18T00:14:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850647&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "'미중러' 바라만 보는 한일…\"서로 협력\" 강조",
@@ -70,12 +22,6 @@
   "title": "위험 민원 많았는데…유치원생 모자 '참변'",
   "summary": "대구 한 도심에서 40대 여성과 유치원생 아들이 횡단보도를 건너다 차에 치여 숨졌습니다. 사고가 난 곳은 신호등이 없어 평소에도 위험하다는 주민 민원이 많았던 곳이었습니다.TBC 박동주 기자의 보도입니다.",
   "ts": "2026-11-18T01:09:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850643&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "경북 상주 북서쪽 22km 지역서 규모 3.6 지진",
-  "summary": "어젯밤 11시 10분쯤 경북 상주시 북서쪽 22km 지역에서 규모 3.6의 지진이 발생했습니다.발생 깊이는 20km입니다.경북과 충북에서 진도 …",
-  "ts": "2026-11-18T00:52:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850642&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -4648,5 +4594,17 @@
   "title": "미얀마, '로힝야족 집단학살' ICJ 판결에 \"불공정·부당\" 반발",
   "summary": "▲ 카잉 카잉 소 미얀마 정부 대변인이 20일 수도 네피도에서 기자회견을 갖고 있다.미얀마가 2017년 무슬림 소수민족 로힝야족을 상…",
   "ts": "2026-11-20T21:24:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856508&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "후티 반군, 사우디 금융센터 등 '민간 시설'에 보복 예고",
+  "summary": "▲ 후티 반군의 공격으로 파손된 사우디 수도 리야드의 PIF 타워예멘의 친이란 반군 후티가 사우디아라비아 수도 리야드의 핵심 금융 시…",
+  "ts": "2026-11-20T23:58:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856507&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "푸틴, 미중러 회담 직후 키이우 교량 공격…\"역대 최대 규모\"",
+  "summary": "▲ 우크라이나 공격을 받은 크림대교블라디미르 푸틴 러시아 대통령이 중국에서 사상 첫 미국·중국·러시아 3자 정상회담을 한 직후부터 우…",
+  "ts": "2026-11-20T23:57:00+09:00"
  }
 }
