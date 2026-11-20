@@ -1,16 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850751&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "미중러 앞두고 한일회담…이 대통령, 트럼프와 대면",
-  "summary": "내일 사상 첫 미국과 중국, 러시아의 정상회담을 앞두고 이재명 대통령이 다카이치 일본 총리와 만나 변화하는 국제질서 속 협력을 약속했습니다. 이…",
-  "ts": "2026-11-18T07:18:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850771&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "여당 의원의 황당 대책…\"수험생이 서로 감시\"",
-  "summary": "이미 혼란스러운데 민주당 교육특위위원장이 수능을 보는 수험생들끼리 서로 감시할 수밖에 없지 않냐는 말을 했습니다. 전날에는 교육부 장관이 그러더니 교육 제도를 책임지는 자리에 있는 공직자들이 현실을 너무 모르고 무책임한 발언들을 내놓고 있다는 비판이 거셉니다.한성희 기자입니다.",
-  "ts": "2026-11-18T07:14:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850862&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "태안 해상서 7명 탄 어선 연락두절…해경 수색",
@@ -28,42 +16,6 @@
   "title": "아기 보고 멈춘 남성들…뜻밖 행동에 빵 터진 엄마",
   "summary": "요즘 길거리에 은행나무가 노랗게 물들어있죠.한 엄마가 노란 은행나무길에서 아기 사진을 찍고 있었는데, 갑자기 행인들의 뜻밖의 배려를 보여줬습니다…",
   "ts": "2026-11-18T07:31:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850704&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "5만 원권 받고 \"이상한데\"…남성이 찢어버린 돈 발견",
-  "summary": "편의점에서 물건을 사려던 60대 남성이 내민 5만 원권이 수상했다는데요.다름 아닌 장난감 5만 원권 지폐였습니다.결국 경찰에 붙잡혔는데, 황당한…",
-  "ts": "2026-11-18T07:29:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850894&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "청주 옥산면 단독주택서 화재…60대 남성 사망",
-  "summary": "&#9650; 화재 현장어젯밤 9시 11분쯤 충북 청주시 옥산면의 한 단독주택에서 화재가 발생해 1시간여 만에 진화됐습니다.이 불로 이곳에 거주…",
-  "ts": "2026-11-18T07:21:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850774&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"나도 아기 아빠…무조건 살리고 싶었다\"",
-  "summary": "태어난 지 6개월 된 아기가 심정지 상태에 빠졌다가 119 구급대의 빠른 대처로 가까스로 목숨을 구했습니다. 입원할 병원을 찾지 못해 한 시간 …",
-  "ts": "2026-11-18T07:16:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850703&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"AI가 뭔지도 모르고…\" 22년도 세무사 합격자 인증",
-  "summary": "AI 부정행위가 논란이 되며 국가자격시험의 공정성에도 의문이 제기되고 있는데요.전문직 종사자들이 열심히 준비했던 기록을 SNS에 올리며 노력을 …",
-  "ts": "2026-11-18T07:11:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850702&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "수능 직전 수상한 과외…리트 만점자 \"다 밝혀질 것\"",
-  "summary": "AI 부정행위로 시끄러운 요즘이죠.세무사 시험 수석 합격자의 자수 이후 파장이 일고 있는 가운데 법학적성시험, 리트 최초 만점자를 향한 의혹도 …",
-  "ts": "2026-11-18T07:07:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850747&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "안경·옷깃·소매 검사까지…감독관 눈에 달렸다",
-  "summary": "정부가 수능에서 AI 부정행위를 막기 위한 여러 대책을 내놨지만 급조된 거다 보니 걱정되는 부분들이 많습니다.조윤하 기자가 보완해야 할 점들을 짚어봤습니다.",
-  "ts": "2026-11-18T07:06:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008850861&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -4540,5 +4492,71 @@
   "title": "반도체·앤트로픽 '급락'…AI 투자 불안 확산",
   "summary": "간밤에 미국 증시가 폭락했습니다. 미국 반도체 기업들을 묶은 필라델피아 지수가 10%가량 떨어지는 등 반도체 관련주가 직격탄을 맞았습니다. 기준금리 인상 가능성에 트럼프 대통령의 세금 규제 발언까지 더해지면서 AI 투자 불안 기조가 커진 겁니다.오늘 첫 소식, 민경호 기자입니다.",
   "ts": "2026-11-21T06:21:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856541&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "시험지 스마트폰으로 찍었다…공사 생도 부정행위 퇴교",
+  "summary": "공군사관학교에서도 한 생도가 시험 도중 부정행위를 하다가 적발돼 강제 퇴교됐습니다. 스마트폰으로 시험지를 찍다가 발각된 건데, 사관학교 설립 이…",
+  "ts": "2026-11-21T07:22:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856539&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "끝난 수능도 '추적'한다…\"와이파이·블루투스 기록 저장\"",
+  "summary": "수능은 끝났지만 부정행위 추적은 아직 끝나지 않았습니다. 정부가 시험 당일 수상한 와이파이와 블루투스 신호를 모두 기록해 뒀다며 의심 사례는 철…",
+  "ts": "2026-11-21T07:15:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856537&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[단독] 쿠팡이 찾아간 의원실 어디?…법원 \"공개해야\"",
+  "summary": "지난해 쿠팡 개인정보 유출 사태 이후 폭넓은 로비 활동이 도마에 올랐죠. 이후 실제 어느 의원실에 갔는지 공개해달라는 요청이 국회에 접수됐습니다.",
+  "ts": "2026-11-21T06:46:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856528&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "코스피 10개월 만에 '최저치'…반도체 비관론 언제까지?",
+  "summary": "어제 코스피가 4천900선 아래로 떨어지면서 열 달 만에 최저치를 기록했습니다. 중국을 향한 미국의 반도체 규제가 더 강해질 거라는 우려 속에 반도체 관련주들이 직격탄을 맞았습니다.김기태 기자입니다.",
+  "ts": "2026-11-21T07:10:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856529&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "'용산·동작' 한강벨트 하락 확대…전세는 상승세",
+  "summary": "서울 강남권을 중심으로 시작된 집값 하락 흐름이 용산구와 동작구까지 번졌습니다. 대출 규제와 세금 부담 때문에 비싼 아파트 상승세는 꺾였지만 서울 외곽과 경기 남부 지역에서는 사정이 다른 겁니다.전형우 기자가 취재했습니다.",
+  "ts": "2026-11-21T06:49:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856534&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "올해 마라톤 대회만 '600개'…안전 관리 잘 되나 봤더니",
+  "summary": "지난달 서울시가 공동주최한 한 마라톤 대회에서 참가자가 숨지는 일이 있었습니다.올해 열리는 마라톤 대회가 600개에 달하는데, 안전 관리는 제대로 되고 있는 건지 노유진 기자가 실태 점검했습니다.",
+  "ts": "2026-11-21T07:26:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856532&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "불길 속에 방문마다 '쾅쾅'…한국 온 외국인 16명 구했다",
+  "summary": "이달 초, 서울 관악구의 한 숙박업소에서 큰불이 났습니다. 다행히 외국인 숙박객 16명이 모두 무사히 대피했는데요. 당시 연기를 보자마자 건물로 뛰어 들어가 방문을 두드리며 대피를 도운 한 시민이 있었습니다.김민정 기자의 취재입니다.",
+  "ts": "2026-11-21T07:25:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856536&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "풀이도 없이 답 '척척'…'뿔테 안경'으로 바꿔치려다 결국",
+  "summary": "충남 천안에서는 이번 수능 수학 시험 도중 스마트안경을 사용한 재수생이 현장에서 적발됐습니다. 수학 문제인데도 풀이도 없이 답을 적는 것을 수상히 여긴 감독관이 잡아낸 건데요.",
+  "ts": "2026-11-21T07:20:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856535&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "사인펜 퇴실 조치 번복 '혼선'…수험생들 항의 집회 예고",
+  "summary": "시험장에 가져갈 수 있는 필기구를 '흑색 연필'로만 제한하는 지침, 정부가 수능 하루 전날에 급히 발표했던 건데 결국 현장 혼선으로 이어졌습니다.",
+  "ts": "2026-11-21T07:18:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856530&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"언제까지 정치 눈치 보나\"…김건희 '발끈'",
+  "summary": "주가조작 가담과 고가의 금품수수 혐의로 대법원에서 징역 4년이 확정된 김건희 씨가 판결 하루 만에 공개적으로 불만을 드러냈습니다. 다른 형사재판…",
+  "ts": "2026-11-21T06:43:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856630&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프 \"이란, 합의 원하지만 내가 수용할 합의는 원하지 않아\"",
+  "summary": "▲ 기자회견하는 트럼프도널드 트럼프 미국 대통령이 \"이란은 합의를 원하지만, 내가 받아들일 수 있는 합의는 원하지 않는다\"고 말했습니다.트럼프 대통령은 현지 시간 20일 백악관 기자회견에서 현재 미국 내 고유가가 \"이란과 어떻게 협상하느냐에 달려 있다\"며 이같이 밝혔습니다.이어 \"우리는 그들이 51년 동안 해왔던 가짜 협상이 아니라 진정한 협상을 원한다\"며 \"그들은 51년 동안 사람들에게 허튼소리를 해왔다\"고 지적했습니다.트럼프 대통령은 이란 정권을 \"미쳤다\", \"사악하다\" 등으로 비난하기도 했습니다.트럼프 대통령은 중국 선전 AP",
+  "ts": "2026-11-21T07:06:00+09:00"
  }
 }
