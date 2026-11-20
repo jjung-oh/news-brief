@@ -1,34 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849168&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[자막뉴스] 수능 성적표 4장 직접 고친 LEET 만점자 '고발 위기'…'생중계'가 논란 잠재울까",
-  "summary": "법학적성시험 도입 이후 첫 만점자로 화제를 모았던 이진우 씨가 과거 수능 성적증명서를 직접 수정했다는 사실까지 알려지며 논란이 확산하고 있습니다…",
-  "ts": "2026-11-17T11:21:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849198&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[자막뉴스] '수능 LIVE 풀이' 남기고 게시물 삭제…\"짙어지는 의혹\" vs \"천재\" 시끌",
-  "summary": "법학적성시점, LEET에서 사상 처음으로 만점을 받은 이진우 씨가 인터넷 커뮤니티나 자신의 SNS 계정 등에 올린 글을 일부 삭제한 것으로 알려…",
-  "ts": "2026-11-17T11:19:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849486&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "제주경찰, 여행가방에 필로폰 반입 중국인 조직 추가 검거…총 39명",
-  "summary": "&#9650; 경찰이 압수한 필로폰제주를 경유해 차 봉지로 위장한 필로폰을 밀반입하고 국내 유통한 중국인 조직과 투약자들이 추가 검거됐습니다.제…",
-  "ts": "2026-11-17T11:18:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849485&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "대구서 횡단보도 건너던 40대 어머니·5세 아들 차에 치여 숨져",
-  "summary": "대구의 한 횡단보도에서 40대 어머니와 유치원생 아들이 승용차에 치여 숨진 사실이 뒤늦게 알려졌습니다.경찰에 따르면 지난 15일 오후 2시 21…",
-  "ts": "2026-11-17T11:16:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849474&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[속보] 'AI 무장' 중국 연계 해킹조직, 한국 외교 조직까지 노렸다",
-  "summary": "중국 연계 해킹 조직이 인공지능 기반 침투 도구를 활용해 전 세계 정부 기관과 기업을 공격한 가운데, 한국 외교와 정책 관련 조직들도 공격 대상…",
-  "ts": "2026-11-17T11:18:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849589&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "\"아세안 AI·문화 협력\" 제안…오늘 한일 정상회담",
@@ -64,18 +34,6 @@
   "title": "국민의힘, 2주째 청와대 앞 의총…\"한성숙, 법정에 서는 날 올 것\"",
   "summary": "&#9650; 국민의힘 장동혁 대표, 정점식 원내대표 등 의원들이 17일 서울 종로구 청와대 앞에서 국무회의 의결을 앞둔 이른바 '조작기…",
   "ts": "2026-11-17T12:18:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849576&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "청와대, 비상 대응 TF 구성…수능 AI 부정행위 대책 등 논의",
-  "summary": "&#9650; 임광현 대통령 비서실장이 16일 국회에서 열린 운영위원회 전체회의에서 2027년도 대통령비서실 및 국가안보실 소관 예산안에 대한 …",
-  "ts": "2026-11-17T11:44:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849551&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이 대통령 \"김대중·주룽지·오부치 한중일 협력, 따라 배워야 할 교범\"",
-  "summary": "&#9650; 이재명 대통령이 16일 필리핀 마닐라 필리핀국제컨벤션센터에서 열린 한&#12685;아세안 정상회의에서 발언하고 있다.아세안(ASE…",
-  "ts": "2026-11-17T11:39:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849554&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -136,48 +94,6 @@
   "title": "[자막뉴스] \"우리가 알던 수능은 끝\" \"학부모간 거래까지\"…일타강사들도 \"수능 연기\" 한 목소리",
   "summary": "2027학년도 대학수학능력시험을 단 이틀 앞두고 인공지능을 활용한 부정행위 우려가 확산하자, 유명 입시 강사들이 잇따라 수능 연기를 촉구하고 나…",
   "ts": "2026-11-17T11:57:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849390&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[자막뉴스] 고백한 'AI 부정행위자' 떨고 있니…법조계 \"단순 소지로는 처벌 규정 없어\"",
-  "summary": "국가시험 등에서 AI를 악용한 부정행위 사례들이 도마 위에 오른 가운데, 부정행위를 하기 전에 적발되면 현행법상 처벌 규정이 없어 빠른 입법이 …",
-  "ts": "2026-11-17T11:35:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849544&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "공소청 \"스마트기기 이용 시험 부정행위, 정식 재판 회부 원칙\"",
-  "summary": "&#9650; 공소청 본청공소청은 최근 논란이 된 인공지능 스마트기기를 이용한 시험 부정행위 사범에 엄정 대응할 것을 전국 광역·지방청에 전파했…",
-  "ts": "2026-11-17T11:33:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849363&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[에디터픽] 대낮에 \"한 명 죽이고 교도소 간다\"..여고생 필사의 달리기 '구사일생'",
-  "summary": "지난 13일, 부산 금정구의 한 거리를 10대로 보이는 젊은 여성이 급하게 뛰어갑니다.잠시 전 전혀 본 적도 없는 20대 남성 A 씨가 갑자기 …",
-  "ts": "2026-11-17T11:30:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849524&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "서울시, '청년 전세사기피해예방 현장설명회'…연말연시 이사철 전세사기 걱정된다면",
-  "summary": "&#9650; 서울시 청년 전세사기피해예방 현장설명회서울시는 연말연시 이사철을 앞두고 12월 1일 용산구 서울광역청년센터에서 올해 마지막 &#3…",
-  "ts": "2026-11-17T11:28:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849358&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[자막뉴스] \"욕심 안 부리고 9급 합격\" '부정 자백' 글 '봇물'…'추적' 공언한 경찰에 잡힐까?",
-  "summary": "최근 온라인 커뮤니티와 SNS상에선 공무원 시험, 대학수학능력시험에서 전자기기를 활용한 부정행위를 저질렀다는 이른바, 'AI 자백글&#3…",
-  "ts": "2026-11-17T11:28:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849520&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "한강 드론쇼 올해 24만 명 관람…4명 중 1명은 외국인",
-  "summary": "&#9650; 드론쇼 토끼전올해 한강 드론 라이트쇼에 24만여 명이 다녀갔으며, 회당 평균 관람객은 3만여 명으로 첫해인 2023년의 2.7배로…",
-  "ts": "2026-11-17T11:27:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849567&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "금값 1년 만에 최저…달러·금리 압박",
-  "summary": "&#9650; 금국제 금값이 1년여 만에 최저치로 떨어졌습니다.로이터 통신에 따르면 금 현물 가격은 장중 한때 트로이온스 당 3천830.74달러…",
-  "ts": "2026-11-17T11:41:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008849709&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -4732,5 +4648,107 @@
   "title": "일본 기업, AI 활용 사이버 공격 탐지·복구 최하위",
   "summary": "▲ 해킹 자료사진일본에서 기업 등에 대한 사이버 공격이 잇따르고 있지만 이상 징후 탐지와 복구 작업에 인공지능 AI를 활용하는 수준이…",
   "ts": "2026-11-20T10:53:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855572&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "해군총장, 이달 22∼23일 방일…일 해상자위대와 고위급 교류",
+  "summary": "▲ 김경률 해군참모총장이 18일 경남 거제시 한화오션 옥포조선소에서 열린 울산급 Batch-Ⅲ 5번함 '평택함…",
+  "ts": "2026-11-20T11:40:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855518&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "이 대통령 \"전자정부 세계 1위…일상에서 변화 느끼게 할 것\"",
+  "summary": "▲ 이재명 대통령이재명 대통령이 우리나라가 '2026 유엔 전자정부 평가'에서 194개국 중 1위를 기록했다는 소식을 …",
+  "ts": "2026-11-20T11:21:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855489&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "이 대통령 \"YS 뜻 이어 주가조작·시세조종 세력 엄단\"",
+  "summary": "▲ 이재명 대통령이재명 대통령이 고 전 대통령 서거 11주기인 20일 고인을 추모하며, 금융실명제 등 과감한 개혁을 단행한 김 전 대통령의 뜻을 이어 자본시장과 민생 경제의 '비정상의 정상화'를 이뤄내겠다고 다짐했습니다.이 대통령은 오늘, 국립서울현충원에서 열린 김영삼 전 대통령 서거 11주기 추도식에서 최인호 청와대 정무수석이 대독한 추도사를 통해 \"존경하는 대통령님, 오직 국민을 믿고 거침없이 나아가셨던 발자취를 따르겠다\"고 말했습니다.그러면서, \"어떤 난관 앞에서도 국민의 더 나은 삶이라는 하나의 이정표를 향해 흔들림 없이 뚜",
+  "ts": "2026-11-20T11:10:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008844173&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[오그랲] 중간선거로 판 뒤집혔다? AI 데이터센터가 태양광에 눈 돌리는 이유",
+  "summary": "미국 중간선거에서 민주당이 상원과 하원을 모두 탈환하자 선거 직후 전 세계 청정에너지주가 일제히 상승했습니다. 트럼프 2기 들어 축소됐던 청정에너지 지원에 제동이 걸릴 수 있다는 기대가 시장에 반영된 겁니다.",
+  "ts": "2026-11-20T11:05:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855347&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[자막뉴스] \"시선이 한곳에 머물지 못했다\"…이진우 영상 분석한 프로파일러",
+  "summary": "인공지능을 활용한 시험 부정행위 의혹에 휩싸인 이진우 씨가 숨진 채 발견된 가운데, 전문가들이 이씨 행동과 부정행위 의혹에 대한 분석을 내놨습니…",
+  "ts": "2026-11-20T11:40:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855579&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "친구 살해하고 \"심신미약\"…정재환 정신감정 결과 나왔다",
+  "summary": "▲ '경산 친구 살해 사건' 피의자 정재환지난 7월 경북 경산에서 친구를 살해한 혐의로 재판에 넘겨진 정재환이 과도한 …",
+  "ts": "2026-11-20T11:39:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855467&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[자막뉴스] 수능 시험 중 '스마트안경'…경찰, 구속영장 신청 검토",
+  "summary": "대학수학능력시험 도중 스마트안경을 이용해 부정행위를 한 혐의로 20살 수험생이 경찰에 입건됐습니다.충남경찰청은 수험생 A씨를 위계에 의한 공무집…",
+  "ts": "2026-11-20T11:34:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855560&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "'명함 동봉 명절 선물' 백성현 논산시장 항소심도 당선무효형",
+  "summary": "▲ 대전법원 전경시장으로 재직하면서 선거구민들에게 명절 선물을 제공한 혐의로 기소된 백성현 충남 논산시장이 항소심에서도 당선무효형을 …",
+  "ts": "2026-11-20T11:30:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855290&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"장례식장서 무슨 말을\"…이진우 동기들 잇단 글 봤더니",
+  "summary": "법학적성시험, 리트 만점자 이진우 씨가 어제 숨진 채 발견된 가운데, 이 씨의 서울대 치대 동기들이 애증의 감정을 담아 쓴 글들이 화제가 되고 …",
+  "ts": "2026-11-20T11:48:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855348&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[에디터픽] \"그거 먹으면 큰일 나요\" 약사 경악..AI 철썩같이 믿더니 '아찔'",
+  "summary": "서울의 한 약국에서는 최근 낯선 의약품 이름을 줄줄이 읊는 환자가 부쩍 늘었습니다.인공지능에게 추천을 받은 겁니다.[최진희/약사 : 검색한 걸 …",
+  "ts": "2026-11-20T11:21:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855479&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[바로이뉴스] 김범수, 'SM 주가조작' 2심 무죄…\"카카오 불확실성 해소\"",
+  "summary": "SM엔터테인먼트 시세를 조종한 혐의로 기소된 카카오 창업자 김범수 미래이니셔티브센터장이 2심에서도 무죄를 선고받았습니다.김 센터장은 \"재…",
+  "ts": "2026-11-20T11:15:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855493&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "교육부 \"수능 전자기기 부정행위 총 111건 적발\"",
+  "summary": "교육부는 오늘 어제 치러진 2027학년도 대학수학능력시험에서 스마트기기 등 전자기기 관련 부정행위가 총 111건 적발됐다고 밝혔습니다.교육부에 …",
+  "ts": "2026-11-20T11:48:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855183&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[자막뉴스] 'AI 부정행위' 변호사시험에도?…\"이례적 고득점\" 검증 예정",
+  "summary": "AI 장비로 부정행위를 저지른 사례가 속출하는 가운데, 법무부가 변호사시험에서 이례적인 고득점이 포착될 경우 부정행위 여부를 조사할 방침입니다.…",
+  "ts": "2026-11-20T11:07:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855490&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[단독] 미션 수행하면 보증금 돌려준다더니…10억 원 가로챈 운영자 송치",
+  "summary": "▲ 서울 마포경찰서미션에 참여하면 보증금을 돌려주겠다며 참가자들을 속여 10억 원 상당을 가로챈 자기 계발 플랫폼 운영자가 공소청에 …",
+  "ts": "2026-11-20T11:48:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855466&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "2심 무죄 김범수 \"재판부 판단 감사…카카오 성장에 힘 보탤 것\"",
+  "summary": "▲ SM엔터테인먼트 시세조종 공모 의혹으로 1심에서 무죄를 선고받은 김범수 카카오 미래이니셔티브센터장이 20일 서울 서초구 고등법원에…",
+  "ts": "2026-11-20T11:00:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008855241&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[자막뉴스] 앤트로픽 상장 흥행에도…왜 뉴욕증시는 힘을 못 받나",
+  "summary": "인공지능 기업인 앤트로픽의 나스닥 상장 첫날 성적은 좋았습니다.공모가보다 17% 오른 97달러 17센트에 거래를 마쳤습니다.엔트로픽은 공모가 8…",
+  "ts": "2026-11-20T11:31:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008851494&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미국인들이 데이터센터 결사반대한 진짜 이유…'전기요금 폭탄'의 실체 [스프]",
+  "summary": "⚡ 스프 핵심요약미국 민주당의 중간선거 압승으로 그간 트럼프 행정부 하에서 축소되었던 청정 에너지 산업 지원 및 인플레이션 감축법의 영향력이 다시 확대될 전망이 나오고 있습니다.일론 머스크의 XAI를 비롯한 빅테크 기업들이 데이터 센터 전력 확보를 위해 환경 규제의 허점을 이용해 가스터빈을 활용하던 관행이 의회의 감시 강화로 제동이 걸릴 가능성이 커졌습니다.데이터 센터 건설에 따른 지역 주민의 반발을 해결하기 위해 빅테크 기업들이 태양광 및 에너지 효율화 설비에 직접 투자함으로써 주민들의 전기 요금 부담을 낮추는 방식이 새로운 상생",
+  "ts": "2026-11-20T11:23:00+09:00"
  }
 }
