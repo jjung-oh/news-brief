@@ -1,16 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854815&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"네타냐후 '대이란 군사행동 불가피' 입장…시기 조율만 남아\"",
-  "summary": "▲ 베냐민 네타냐후 이스라엘 총리베냐민 네타냐후 이스라엘 총리가 안보 회의를 소집해 대이란 군사행동이 불가피하다는 입장을 밝힌 것으로…",
-  "ts": "2026-11-20T04:26:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854814&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "사우디 리야드 80층 빌딩 후티 미사일에 파손…'비전2030' 상징",
-  "summary": "▲ 후티 반군의 공격으로 파손된 사우디 수도 리야드의 PIF 타워예멘 친이란 반군 후티의 미사일 공격으로 사우디아라비아 국부펀드 사무…",
-  "ts": "2026-11-20T04:24:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854855&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "트럼프 \"김정은과 좋은 관계지만, 이번엔 회담 성사 안돼\"",
@@ -2830,5 +2818,17 @@
   "title": "이란, 바레인 정유시설 섬 공습…\"2명 부상\"",
   "summary": "▲ 21일 바레인 시트라의 한 민간 시설에서 바레인 당국이 이란의 소행이라고 밝힌 공격 이후 화재가 발생해 불길이 치솟고 있다.바레인…",
   "ts": "2026-11-22T23:56:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008858023&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "리비아서 러시아 군함 피격…\"우크라이나 드론 추정\"",
+  "summary": "▲ 우크라이나의 드론 공장 (위 사진은 기사 내용과 관련이 없습니다.)북아프리카 리비아 동부 벵가지 해군기지에 정박해 있던 러시아 군…",
+  "ts": "2026-11-23T04:29:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857998&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미 재무장관 \"엔비디아 수출 통제 위반, 젠슨 황 사생활과 따로 봐야\"",
+  "summary": "▲ 스콧 베선트 미국 재무장관스콧 베선트 미국 재무장관이 엔비디아 칩의 중국 밀반입 의혹과 관련해, 핵심은 회사의 규정 준수 체계이며…",
+  "ts": "2026-11-23T04:05:00+09:00"
  }
 }
