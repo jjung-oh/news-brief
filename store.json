@@ -1,33 +1,9 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854570&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[D리포트] SBS, 행정안전부 공동주최 '제30회 민원봉사대상'…대상은 대덕구 김정기 씨",
-  "summary": "행정안전부와 SBS가 공동으로 주최하고 농협이 후원하는 '제30회 민원봉사대상 시상식'이 오늘 SBS 프리즘타워에서 개최됐습니다.…",
-  "ts": "2026-11-19T19:39:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854340&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "오늘의 특집 SBS 8뉴스 예고 (11월 19일)",
-  "summary": "오늘 <SBS 8뉴스>에서는▶ 초강수 대책에도 수능 부정행위...카메라·이어폰·AI 안경 다 나와▶ 사상 초유 위급재난문자…",
-  "ts": "2026-11-19T19:34:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854498&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[랭킹뉴스] 리트 만점자 사망…의혹만 남기고",
-  "summary": "'SBS <뉴스헌터스>'를 정확히 밝혀주시기 바랍니다. ■ <뉴스헌터스> ■ 진행 : 김종원, 윤태진 앵커<…",
-  "ts": "2026-11-19T19:28:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854499&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "[이슈빡] 사상 첫 '미중러 정상회담'…'얄타 2.0'?",
   "summary": "'SBS <뉴스헌터스>'를 정확히 밝혀주시기 바랍니다. ■ <뉴스헌터스> ■ 진행 : 김종원, 윤태진 앵커■ 강준영 , 문성묵 사상 최초로 미중러 정상의 3자 회담이 오늘 중국 선전에서 열렸습니다.",
   "ts": "2026-11-19T19:45:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854263&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[머그 인사이트] MS·항공·은행·NSA까지 연속 장애…\"공격은 아니\"라는데 왜?",
-  "summary": "미국의 항공, 은행, IT 서비스가 엿새 동안 연달아 멈췄습니다.마이크로소프트 아웃룩·팀즈는 36시간 먹통에항공기 이륙은 4시간 넘게 중단됐고,…",
-  "ts": "2026-11-19T19:15:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008854517&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -3040,5 +3016,17 @@
   "title": "'서울중수청 1호 강제수사' 명륜당 회장 추가 압수수색 영장 기각",
   "summary": "▲ 서울 송파구 명륜당 본사 모습숯불갈비 프랜차이즈 '명륜진사갈비'를 운영하는 명륜당 이종근 회장과 관련해 중 대범죄수…",
   "ts": "2026-11-22T17:06:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857913&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "F4 \"시장 상황 따라 증안펀드 바로 가동할 수 있게 준비 착수\"",
+  "summary": "▲ 이형일 부총리 겸 재정경제부 장관이 22일 서울 종로구 정부서울청사에서 열린 긴급 시장상황점검회의를 주재하고 있다.경제 금융 수장…",
+  "ts": "2026-11-22T18:51:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857921&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "강원 영월서 차박하던 70대 숨져…일산화탄소 중독 추정",
+  "summary": "강원 영월에서 차량 숙박을 하던 70대 여성이 일산화탄소 중독으로 추정되는 사고로 숨졌습니다.오늘 오전 10시 10분쯤 영월군 무릉도원면 법흥리…",
+  "ts": "2026-11-22T19:22:00+09:00"
  }
 }
