@@ -1,46 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856565&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "미 LA 도심 가까이서 규모 4.2 지진…\"진동 때문에 잠에서 깨\"",
-  "summary": "▲ LA에서 발생한 지진미국 서부 최대 도시인 로스앤젤레스 도심 인근에서 밤사이 지진이 발생했습니다.미국 지질조사국에 따르면 현지 시…",
-  "ts": "2026-11-21T04:26:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856564&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "비트코인 4달 만에 도로 6만 달러 아래로…2022년 이후 최장 약세",
-  "summary": "가상화폐 시가총액 1위 종목인 비트코인이 4개월 만에 다시 6만 달러선 아래로 무너졌습니다.현지시간 20일 미국 가상화폐 거래소 코인베이스에 따…",
-  "ts": "2026-11-21T04:25:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856563&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "트럼프 \"미기업, 다른 나라에 데이터센터 지으면 엄청난 세금 부과\"",
-  "summary": "▲ 도널드 트럼프 대통령도널드 트럼프 미국 대통령이 미국 기술 대기업이 다른 나라에 AI 데이터센터를 지을 경우 고액의 세금을 부과하…",
-  "ts": "2026-11-21T04:22:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856562&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "사우디 연합군 \"홍해 후티 반군 '무기 밀수 근거지' 타격\"",
-  "summary": "예멘의 친이란 반군 후티와 교전 중인 사우디아라비아 주도 연합군이 예멘의 주요 홍해 항구인 호데이다에서 반군의 무기 및 탄도미사일 밀수·운송 근…",
-  "ts": "2026-11-21T04:20:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856561&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "미 재무 \"'엔비디아 H200 중국 판매 허용' 정책 변화 없어\"",
-  "summary": "▲ 베선트 미 재무장관스콧 베선트 미국 재무부 장관이 \"적절한 반도체 제한 조치가 시행되고 원격 접근도 제한되는 것을 보게 …",
-  "ts": "2026-11-21T04:17:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856559&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "베선트 \"미중 정상, AI 군사 결정에 인간 개입 합의\"",
-  "summary": "▲ 도널드 트럼프 미국 대통령과 스콧 베선트 재무장관도널드 트럼프 미국 대통령과 시진핑 중국 국가주석이 AI 기술을 활용한 군사적 결…",
-  "ts": "2026-11-21T04:16:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856558&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"트럼프, 우크라 종전협상 내년 1월 초까지 타결 원해\"",
-  "summary": "▲ 19일 만난 트럼프와 푸틴도널드 트럼프 미국 대통령이 내년 1월 3일 민주당이 연방의회 다수당이 되기 전에 우크라이나 종전 협상 …",
-  "ts": "2026-11-21T04:13:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856540&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "나흘 만에 나온 교육장관…\"사퇴하라면 해야죠\"",
@@ -3154,5 +3112,11 @@
   "title": "네타냐후 \"정치적 이유로 안보위협 축소\"…거국내각 요구",
   "summary": "▲ 베냐민 네타냐후 이스라엘 총리베냐민 네타냐후 이스라엘 총리가 정치적 이유로 안보 위협을 축소하고 있다며 정적들을 비난하고 거국일치…",
   "ts": "2026-11-24T02:52:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859920&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프 \"젠슨 황 복귀 안보위험 아냐…내가 이사회 설득\"",
+  "summary": "▲ 젠슨 황 엔비디아 CEO와 도널드 트럼프 미국 대통령도널드 트럼프 미국 대통령은 현지시간 23일 엔비디아 이사회를 설득해 젠슨 황의 최고경영자 복귀를 성사시켰다고 밝혔습니다.황 CEO가 불법행위에 관여했다는 증거가 없고 아무 잘못이 없다는 주장도 했습니다.민간기업인 엔비디아의 이사회를 압박해 황 CEO의 복귀를 관철한 셈이라 논란이 예상됩니다.트럼프 대통령은 이날 CNBC방송과의 전화 인터뷰에서 황 CEO의 엔비디아 복귀와 관련해 자신이 엔비디아 이사회와 직접 접촉했다고 말했습니다.그는 \"내가 그들을 설득했고 일을 성사시켰다\"고",
+  "ts": "2026-11-24T04:08:00+09:00"
  }
 }
