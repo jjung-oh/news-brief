@@ -1,46 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856540&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "나흘 만에 나온 교육장관…\"사퇴하라면 해야죠\"",
-  "summary": "부실한 수능 부정행위 방지 준비로 빈축을 산 뒤 수능 당일까지도 두문불출하던 최교진 교육부 장관이 어제 나흘 만에 모습을 드러냈습니다. 물러날 생각이 있냐는 질문에 최 장관은 임명해 주신 분이 사퇴하라고 하면 언제든 하겠다고 말했습니다.김지욱 기자입니다.",
-  "ts": "2026-11-21T06:41:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856527&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "압수수색 불가…'리트 만점자' 수사 난항",
-  "summary": "법학적성시험에서 만점을 받아 AI 부정행위 의혹을 받은 이진우 씨가 숨졌지만 경찰은 수사를 계속 이어가겠다는 입장입니다. 하지만 현실적으로 제기…",
-  "ts": "2026-11-21T06:38:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856526&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "오늘부터 논술·면접…\"뾰족한 대책 없다\"",
-  "summary": "오늘부터는 논술과 면접시험이 시작됩니다. 정부가 AI 부정행위를 막는 긴급 대응반을 운영하기로 했지만 수험생 수만 명이 한 번에 몰리는 만큼, 모두 잡아낼 수 있을지 우려가 나옵니다.정성진 기자입니다.",
-  "ts": "2026-11-21T06:36:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856525&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[단독] 속옷에 숨겼다가 화장실에 버렸다…111명 적발",
-  "summary": "이틀 전 치러진 대학수학능력시험에서 스마트기기 관련 부정행위로 적발된 수험생이 111명으로 파악됐습니다. 속옷에 숨겼다가 화장실에 버리고 오는가…",
-  "ts": "2026-11-21T06:31:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856521&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[모닝와이드] 오늘의 주요뉴스",
-  "summary": "1. 뉴욕증시 급락...\"외국에 데이터센터 지으면 과세\"밤사이 뉴욕증시가 일제히 하락했습니다. 미국 최대 기업공개 실적을 거둔 앤트로픽과 엔비디아, AMD 등 AI, 반도체 기업들의 주가가 큰 폭으로 떨어졌는데 트럼프 대통령은 미국 기업이 데이터센터를 외국에 지으면 엄청난 세금을 물리겠다고 말했습니다.2.",
-  "ts": "2026-11-21T06:17:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856582&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "트럼프 \"미중러 회담서 한반도 관련 논의\"",
-  "summary": "이틀 전 중국에서 열린 미중러 3자 정상회담에서 북한 문제를 논의했다고 트럼프 미국 대통령이 밝혔습니다. 어떤 내용을 논의했는지는 공개하지 않았는데, 북핵 문제를 놓고 3국 정상이 의견을 나눴을 가능성이 거론됩니다.워싱턴 전병남 특파원입니다.",
-  "ts": "2026-11-21T06:29:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856581&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "반도체·앤트로픽 '급락'…AI 투자 불안 확산",
-  "summary": "간밤에 미국 증시가 폭락했습니다. 미국 반도체 기업들을 묶은 필라델피아 지수가 10%가량 떨어지는 등 반도체 관련주가 직격탄을 맞았습니다. 기준금리 인상 가능성에 트럼프 대통령의 세금 규제 발언까지 더해지면서 AI 투자 불안 기조가 커진 겁니다.오늘 첫 소식, 민경호 기자입니다.",
-  "ts": "2026-11-21T06:21:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856541&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "시험지 스마트폰으로 찍었다…공사 생도 부정행위 퇴교",
@@ -52,12 +10,6 @@
   "title": "끝난 수능도 '추적'한다…\"와이파이·블루투스 기록 저장\"",
   "summary": "수능은 끝났지만 부정행위 추적은 아직 끝나지 않았습니다. 정부가 시험 당일 수상한 와이파이와 블루투스 신호를 모두 기록해 뒀다며 의심 사례는 철…",
   "ts": "2026-11-21T07:15:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856537&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[단독] 쿠팡이 찾아간 의원실 어디?…법원 \"공개해야\"",
-  "summary": "지난해 쿠팡 개인정보 유출 사태 이후 폭넓은 로비 활동이 도마에 올랐죠. 이후 실제 어느 의원실에 갔는지 공개해달라는 요청이 국회에 접수됐습니다.",
-  "ts": "2026-11-21T06:46:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856528&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -94,12 +46,6 @@
   "title": "사인펜 퇴실 조치 번복 '혼선'…수험생들 항의 집회 예고",
   "summary": "시험장에 가져갈 수 있는 필기구를 '흑색 연필'로만 제한하는 지침, 정부가 수능 하루 전날에 급히 발표했던 건데 결국 현장 혼선으로 이어졌습니다.",
   "ts": "2026-11-21T07:18:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856530&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"언제까지 정치 눈치 보나\"…김건희 '발끈'",
-  "summary": "주가조작 가담과 고가의 금품수수 혐의로 대법원에서 징역 4년이 확정된 김건희 씨가 판결 하루 만에 공개적으로 불만을 드러냈습니다. 다른 형사재판…",
-  "ts": "2026-11-21T06:43:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008856630&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -3118,5 +3064,77 @@
   "title": "트럼프 \"젠슨 황 복귀 안보위험 아냐…내가 이사회 설득\"",
   "summary": "▲ 젠슨 황 엔비디아 CEO와 도널드 트럼프 미국 대통령도널드 트럼프 미국 대통령은 현지시간 23일 엔비디아 이사회를 설득해 젠슨 황의 최고경영자 복귀를 성사시켰다고 밝혔습니다.황 CEO가 불법행위에 관여했다는 증거가 없고 아무 잘못이 없다는 주장도 했습니다.민간기업인 엔비디아의 이사회를 압박해 황 CEO의 복귀를 관철한 셈이라 논란이 예상됩니다.트럼프 대통령은 이날 CNBC방송과의 전화 인터뷰에서 황 CEO의 엔비디아 복귀와 관련해 자신이 엔비디아 이사회와 직접 접촉했다고 말했습니다.그는 \"내가 그들을 설득했고 일을 성사시켰다\"고",
   "ts": "2026-11-24T04:08:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859948&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "그때도 지금도 '첫 여성' 파격…돌아온 강금실",
+  "summary": "강금실 국정원장 후보자는 23년 전 최초의 여성 법무부 장관에 올랐던 인물이죠. 이번에 정식 임명된다면 헌정사상 처음으로 정보기관 수장을 맡은 여성이라는 또 하나의 기록을 쓰게 됩니다.",
+  "ts": "2026-11-24T06:38:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859933&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "'깜짝' 중폭 개각…외교안보 '자주파' 교체",
+  "summary": "이재명 대통령이 장관급 5명을 교체하는 개각을 단행했습니다. 국가정보원장에 사상 첫 여성 후보자인 강금실 전 법무부 장관을 발탁한 것을 비롯해,…",
+  "ts": "2026-11-24T06:13:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859939&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "서울지하철 멈추나…노사 오늘 최종 교섭",
+  "summary": "전면파업을 예고한 서울지하철 노조가 오늘 사측인 교통공사와 최종교섭에 나섭니다. 협상이 결렬되면 내일 첫 차부터 파업이 시작되면서, 열차 운행이…",
+  "ts": "2026-11-24T06:27:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859938&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"작년 시험지 상당수 폐기\"…'AI 커닝' 검증 난항",
+  "summary": "AI 부정행위 의혹이 대학수학능력시험으로 번지면서, 풀이 흔적이 남아 증거로 활용될 수 있는 지난해 수능 시험지를 보관하라고 앞서 정부가 지시했죠.",
+  "ts": "2026-11-24T06:25:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859937&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[단독] \"피 흘린다\" 신고에 출동했더니…화장실서 마약",
+  "summary": "학교 근처에 있는 서울 도심의 한 공원 화장실에서 대낮에 필로폰을 투약하던 20대 여성이 경찰에 붙잡혔습니다. 이 여성은 지난달에도 마약을 갖고 있다가 경찰 수사를 받았던 것으로 파악됐습니다.정지연 기자가 취재했습니다.",
+  "ts": "2026-11-24T06:23:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859936&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "최태원 \"9,440억 원 내겠다\"…9년 소송 끝내나",
+  "summary": "최태원 SK그룹 회장이 대법원 재상고심으로 향한 노소영 아트센터 나비 관장과의 재산분할 소송에서, 앞서 지급 판결을 받은 9천440억 원을 모두…",
+  "ts": "2026-11-24T06:20:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859935&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "'음주운전' 고경표 경찰 출석…울먹이며 \"정말 죄송\"",
+  "summary": "열흘 전 만취 상태로 음주운전을 하다가 차량 사고를 낸 배우 고경표 씨가 어제 경찰에 출석했습니다. 조사를 받고 나온 고 씨는 죄송하다며 고개를 숙였습니다.김기태 기자입니다.",
+  "ts": "2026-11-24T06:17:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859934&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "'개표 은닉' 선관위 직원 1명 구속…7명 기각",
+  "summary": "지난 6·3 지방선거에서 경기도 교육감 개표 상황표를 조작한 혐의를 받는 선관위 직원이 구속됐습니다. 선관위 특검팀은 투표율을 허위 입력하고 사…",
+  "ts": "2026-11-24T06:15:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859930&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[모닝와이드] 오늘의 주요뉴스",
+  "summary": "1. 젠슨 황 전격 복귀...엔비디아 주가 '폭등'젠슨 황이 사임한 지 11일 만에 엔비디아 CEO로 전격 복귀했습니다. 엔비디아 주가는 30% 넘게 올랐고, 뉴욕증시 3대 지수 모두 급등했습니다.2.",
+  "ts": "2026-11-24T06:04:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859951&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "젠슨 황 복귀에 '환호'…\"GPU 예수 부활\"",
+  "summary": "엔비디아 최고경영자로 전격 복귀한 젠슨 황을 향해, 실리콘밸리와 월가에서는 일제히 환영의 뜻을 밝혔습니다. 일론 머스크 테슬라 CEO는 실수가 …",
+  "ts": "2026-11-24T06:36:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859932&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "트럼프 \"내가 이사회 설득\"…민주 \"전면 조사\"",
+  "summary": "젠슨 황이 엔비디아 최고경영자로 전격 복귀할 수 있었던 배경에는 공개적으로 지지 의사를 밝히면서 물밑에서 직접 개입한 트럼프 미국 대통령의 영향력이 거론됩니다.",
+  "ts": "2026-11-24T06:10:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859931&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "젠슨 황, 11일만에 전격 복귀…엔비디아 주가 '폭등'",
+  "summary": "중국 스파이 의혹을 받은 여성과 불륜 사실을 인정한 뒤 엔비디아를 떠났던 젠슨 황이 11일 만에 최고경영자로 전격 복귀했습니다. 이 소식에 엔비디아 주가는 30% 넘게 급등했고, 뉴욕증시 3대 지수도 일제히 오르면서 모처럼 순풍이 불었습니다.오늘 첫 소식, 뉴욕 김현우 특파원이 보도합니다.",
+  "ts": "2026-11-24T06:07:00+09:00"
  }
 }
