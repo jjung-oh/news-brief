@@ -1,40 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857285&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "코레일 \"이탈 열차 운행 중단, 첫 열차부터 재개\"",
-  "summary": "어제 발생한 경부선 화물열차 궤도이탈 사고로 중지됐던 천안∼대전 간 일반 열차 운행이 오늘 첫 열차부터 모두 재개됐습니다.한국철도공사는 …",
-  "ts": "2026-11-22T07:16:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857284&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "'쾅' 인도로 버스 돌진…승객 6명 병원 이송",
-  "summary": "어제 저녁 사람들이 많이 오가는 서울 홍대입구역 앞에서 버스가 인도로 돌진하는 사고가 발생했습니다. 이 사고로 버스 승객들이 다쳐 병원으로 옮겨졌습니다.서동균 기자의 보도입니다.",
-  "ts": "2026-11-22T07:15:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857283&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "식당 앞치마까지 동원…논술시험장도 'AI 부정' 비상",
-  "summary": "수능 직후 첫 주말을 맞아 주요 대학들의 논술과 면접 고사가 치러졌습니다. AI 부정행위를 막기 위해 대학들이 시험관리를 강화했고, 수험생들 혼란도 잇따랐는데요.",
-  "ts": "2026-11-22T07:11:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857306&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이제 객관식 말고 서·논술형으로?…'수능 개편론' 급부상",
-  "summary": "▲ 수능 시험장대학수학능력시험에서 첨단기기를 이용한 부정행위가 적발되고 이재명 대통령이 국가시험 제도의 전면 개편을 주문하면서 서·논…",
-  "ts": "2026-11-22T07:06:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857286&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "긴장 고조되는 발트해…\"러 화물선 드론에 피격\"",
-  "summary": "발트해 핀란드만 공해상에서 러시아 칼리닌그라드로 향하던 러시아 화물선이 드론 2대로부터 공격을 받았다고 현지시간 21일 러시아 당국자가 밝혔습니…",
-  "ts": "2026-11-22T07:19:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857321&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"로또 안 줘?\" 식당 주인 부부 흉기로…무기징역→45년 감형",
-  "summary": "▲ 법원식당에서 서비스용 로또 복권을 주지 않는다는 이유로 흉기 난동을 벌여 가게 안주인을 살해한 혐의로 1심에서 무기징역을 선고받은…",
-  "ts": "2026-11-22T07:30:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857384&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "아내·주민들 노리고 \"가스 방출 시도\"…50대 집행유예",
@@ -4144,5 +4108,77 @@
   "title": "베네수엘라, 정부·국영기업 빚만 GDP 2배 넘어…\"채무 구조조정\"",
   "summary": "▲ 베네수엘라 석유베네수엘라 정부가 자국 국내총생산의 2배를 훌쩍 넘어서는 320조 원 규모의 정부·공공기관·국영기업의 빚을 공개하며…",
   "ts": "2026-11-25T06:03:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862003&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "김병기, 1년 넘는 수사 끝 '불구속 송치'…'용두사미' 논란",
+  "summary": "공천 헌금 수수 묵인을 비롯해 13가지 의혹을 받아왔던 무소속 김병기 의원이 공소청으로 송치됐습니다. 경찰이 1년 2개월 동안 수사를 이어왔는데…",
+  "ts": "2026-11-25T07:40:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861928&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"딸 팔아버린다\" 협박까지…'200만 원' 빌렸다가 날벼락",
+  "summary": "높게는 연 8만%가 넘는 살인적인 이자율로 돈을 빌려주던 불법 사금융업체가 경찰에 덜미를 잡혔습니다. 빌린 돈은 200만 원인데 1억 5천만 원을 갚게 만드는 무법 행위가 벌어진 건데, 딸을 납치해 팔아버리겠다는 식의 협박도 일삼았습니다.이세현 기자의 보도입니다.",
+  "ts": "2026-11-25T07:38:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861884&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"경찰인데요\" 편의점서 딱 걸렸다…한밤 손님 반전 정체",
+  "summary": "술에 취해 주차도 제대로 하지 못하던 음주운전자가 편의점으로 향했습니다.'술타기'를 시도하려던 건데, 경찰에 덜미를 잡혔습니다.어…",
+  "ts": "2026-11-25T07:28:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862040&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "남해고속도로서 트레일러 넘어지면서 승용차 연쇄 추돌…3명 심정지",
+  "summary": "▲ 진례천교 지점 교통사고오늘 새벽 5시쯤 경남 김해시 진례면 남해고속도로 순천 방향 진례분기점 진례천교 지점 1차로에서 트레일러가 …",
+  "ts": "2026-11-25T07:12:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862013&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "포항 도로 터널 외벽서 화재…2시간 50분 만에 꺼져",
+  "summary": "▲ 경북 포항 터널 화재오늘 새벽 0시 26분쯤 경북 포항시 북구 득량동 방장산터널 외벽에서 불이 나 2시간 50여 분 만에 꺼졌습니…",
+  "ts": "2026-11-25T07:03:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862048&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "기후변화의 비극…페루서 올해 바다사자 1만여 마리 폐사",
+  "summary": "▲ 남아메리카바다사자 적도 부근 해수면 온도가 비정상적으로 상승해 발생하는 이상 기후 현상 엘니뇨 여파로 페루에서만 올해 바다사자 1…",
+  "ts": "2026-11-25T07:25:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861925&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "러 '전략폭격기 비행' 인정했지만…\"계획된 비행이었다\"",
+  "summary": "우리 방공식별구역 무단 진입에 대해 러시아는 동해의 국제 수역 상공에서 이뤄진 계획된 비행이었다며, 규정을 준수했다는 입장을 밝혔습니다. 비행에…",
+  "ts": "2026-11-25T07:21:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862002&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미국 '과잉생산 관세' 곧 발표…\"한국은 15% 유지 예상\"",
+  "summary": "미국 무역대표부가 이르면 오늘 한국을 포함한 16개 경제주체에 대한 '과잉생산 관세' 조사 결과를 발표할 것이라는 외신의 예측이 …",
+  "ts": "2026-11-25T07:17:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862032&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "NYT \"CIA도 해킹으로 일부 정보 노출\"…미 정보당국 보안 우려 고조",
+  "summary": "▲ 미국 중앙정보국 본부미국 중앙정보국이 최근 해킹으로 일부 정보가 노출되는 피해를 본 것으로 알려졌습니다.뉴욕타임스는 현지시간 24…",
+  "ts": "2026-11-25T07:07:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862014&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "뉴욕증시, 엔비디아 급등 후 차익실현에 혼조세 마감…나스닥 1.5%↓",
+  "summary": "▲ 뉴욕증권거래소미국 뉴욕증시의 3대 주요 주가지수가 전날 급등에 따른 차익 실현 매물 출회와 트럼프 행정부의 추가 관세 부과 우려 …",
+  "ts": "2026-11-25T07:05:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862012&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "젠슨 황, 엔비디아 전 직원 회의서 사과…\"심리치료 받고 있다\"",
+  "summary": "▲ 젠슨 황 엔비디아 최고경영자젠슨 황 엔비디아 최고경영자가 복귀 하루 만에 전 직원 앞에 서서 사과했습니다.블룸버그 통신과 와이어드…",
+  "ts": "2026-11-25T07:00:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862011&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미 당국, 법원에 '중국판 유니클로' 쉬인 제소…\"소비자보호법 위반\"",
+  "summary": "▲ 중국 패션 전자상거래 업체 '쉬인'미국의 반독점·소비자보호 당국인 연방거래위원회가 중국의 패스트패션 전자상거래 업체…",
+  "ts": "2026-11-25T06:58:00+09:00"
  }
 }
