@@ -1,28 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857089&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이 대통령, 울산 전통시장 두 곳 방문…\"내년엔 좀 더 좋아질 것\"",
-  "summary": "▲ 이재명 대통령이 21일 울산 SK AI 데이터센터 건설현장을 방문해 둘러보고 있다.이재명 대통령은 21일 울산의 전통 시장 두 곳…",
-  "ts": "2026-11-21T18:34:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857080&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "한 달이나 빨리 왔다…\"하수서 독감 바이러스 급증\" 경고",
-  "summary": "▲ 독감 유행 전북특별자치도보건환경연구원은 도내 하수에서 인플루엔자 바이러스와 코로나19 바이러스 등 호흡기 감염병 유발 병원체 검출…",
-  "ts": "2026-11-21T18:24:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857081&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[단독] 강원 평창서 공기총 발사로 60대 남성 사망…중과실치사 혐의 검토",
-  "summary": "▲ 평창 비닐하우스 총기 발사 사고 현장강원 평창의 한 비닐하우스에서 60대 남성이 쏜 공기총에 맞아 근처를 지나가던 60대 남성이 …",
-  "ts": "2026-11-21T18:29:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857086&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "갤럭시 S펜 핵심기술 보유 일본 와콤, MBK가 1조 원대에 인수",
-  "summary": "▲ MBK파트너스 CIMBK파트너스가 일본의 디지털 펜 제조사 와콤을 1조 원대에 인수하는 것으로 전해졌습니다.21일 도쿄증권거래소 …",
-  "ts": "2026-11-21T18:32:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857043&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "오늘의 SBS 8뉴스 예고 (11월 21일)",
@@ -3766,5 +3742,41 @@
   "title": "'대체 불가' 확인?…미국 경제에 젠슨 황·엔비디아 위상은",
   "summary": "▲ 젠슨 황젠슨 황 엔비디아 최고경영자가 복귀하면서 황 CEO와 엔비디아가 미국 경제에서 갖는 위상이 다시금 주목받고 있습니다.황 C…",
   "ts": "2026-11-24T16:22:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861643&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "무신사 \"블랙프라이데이 매출, 43시간 만에 1천억 원 돌파\"",
+  "summary": "▲ 무신사 무진장 2026 겨울 블랙프라이데이 현황판 캡처 화면무신사의 연중 최대 규모 할인 행사인 '무신사 무진장 겨울 블랙…",
+  "ts": "2026-11-24T19:01:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861642&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"메일 요약 맡겼더니, 고객 정보가 밖으로\"…AI 에이전트 노리는 사이버 공격",
+  "summary": "▲ 피클 AI 에이전트인공지능이 스스로 판단하고 업무를 수행하는 에이전트로 발전하면서, 사이버 공격의 대상이 AI가 업무 과정에서 축…",
+  "ts": "2026-11-24T19:01:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861640&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "서울지하철 노사 막판 교섭 중…내일 새벽부터 총파업 가능성",
+  "summary": "▲ 24일 서울 성동구 서울교통공사 본사에서 올바른노조와 사측의 임단협 최종교섭이 진행되고 있다.서울교통공사 3개 노동조합이 총파업을…",
+  "ts": "2026-11-24T18:56:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861267&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "오늘의 SBS 뉴스헌터스 예고 (11월 24일)",
+  "summary": "오늘 <SBS 뉴스헌터스>에서는▶ 이슈빡 - 돌아온 AI 황제 젠슨 황▶ 사건why1. 도둑맞은 오토바이, 찾고 보니 당근…",
+  "ts": "2026-11-24T18:43:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861365&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[단독] 위급재난 문자, 간단한 조작만으로 차단 가능…대책 시급 (D리포트)",
+  "summary": "지난 19일 수능 당일 오후, 소란스러운 알림음과 함께 위급재난 문자가 뜹니다.그런데 왼쪽 휴대폰은 시작 화면에 멈춘 채 아무런 반응이 없습니다…",
+  "ts": "2026-11-24T18:11:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861508&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[머그 인사이트] '복귀는 없다'더니 11일 만에 뒤집혔다…젠슨 황 귀환, 마냥 웃을 수 없는 이유",
+  "summary": "사임 11일 만에 엔비디아 CEO 자리로 돌아온 젠슨 황.혼외 관계와 중국 스파이 의혹으로 물러났던 그가 다시 돌아오자 곳곳에서 환호가 쏟아졌습…",
+  "ts": "2026-11-24T18:05:00+09:00"
  }
 }
