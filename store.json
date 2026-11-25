@@ -1,16 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008858023&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "리비아서 러시아 군함 피격…\"우크라이나 드론 추정\"",
-  "summary": "▲ 우크라이나의 드론 공장 (위 사진은 기사 내용과 관련이 없습니다.)북아프리카 리비아 동부 벵가지 해군기지에 정박해 있던 러시아 군…",
-  "ts": "2026-11-23T04:29:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857998&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "미 재무장관 \"엔비디아 수출 통제 위반, 젠슨 황 사생활과 따로 봐야\"",
-  "summary": "▲ 스콧 베선트 미국 재무장관스콧 베선트 미국 재무장관이 엔비디아 칩의 중국 밀반입 의혹과 관련해, 핵심은 회사의 규정 준수 체계이며…",
-  "ts": "2026-11-23T04:05:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008858031&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "청와대, 후임 인선 돌입…\"시험지 촬영·전송 막겠다\"",
@@ -4870,5 +4858,29 @@
   "title": "구례 주택서 80대 남성 사망…\"방에서 숯 피우다 사고 추정\"",
   "summary": "어제 오후 8시 20분쯤 전남광주 구례군 한 주택에서 80대 남성이 숨졌습니다.남성의 아내인 80대 여성도 경상을 입고 병원으로 옮겨졌습니다.경…",
   "ts": "2026-11-26T03:26:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863871&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "한밤중 일산 아파트서 불…\"전기난로로 인한 화재 추정\"",
+  "summary": "어젯밤 10시 30분쯤, 일산 서구의 한 14층짜리 아파트 13층에서 불이 나 1시간여 만에 꺼졌습니다.이 불로 다친 사람은 없었지만, 주민 5…",
+  "ts": "2026-11-26T04:30:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863846&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미 금융범죄 단속기관도 해킹 피해…일부 시스템 가동 중단",
+  "summary": "▲ 미국 재무부 청사최근 미국 정부기관의 사이버 보안 사고가 잇따르는 가운데 자금세탁 등 금융범죄 방지를 담당하는 미 재무부 산하 기…",
+  "ts": "2026-11-26T04:07:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863844&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미 무역대표, 젠슨 황 복귀에 \"트럼프, 경제·안보 균형 맞춰\"",
+  "summary": "▲ 젠슨 황 엔비디아 CEO와 도널드 트럼프 미국 대통령'엔비디아 사태'를 앞두고 미국 행정부 내 치열한 논쟁이 있었으며, 도널드 트럼프 대통령이 엇갈린 주장 사이에서 균형점을 찾은 결과 젠슨 황의 엔비디아 최고경영자 복귀에 힘을 싣게 됐다고 제이미슨 그리어 미 무역대표부 대표가 전했습니다.그리어 대표는 현지시간 25일 CNBC 방송에 출연, 엔비디아 사태에 대해 \" 모두가 대통령에게 각자의 견해를 제시했다.",
+  "ts": "2026-11-26T04:05:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863843&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "스페인 카나리아 제도에 하루새 이주민 2천100명…역대 최다",
+  "summary": "▲ 스페인 카나리아제도 엘이에로섬에 도착한 이주민들북아프리카 모로코에서 가까운 스페인 카나리아 제도에 지난 24시간 동안 이주민 2천…",
+  "ts": "2026-11-26T04:03:00+09:00"
  }
 }
