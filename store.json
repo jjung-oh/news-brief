@@ -1,34 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857974&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "비닐하우스서 공기총 쏜 60대…모르는 마을 주민 숨졌다",
-  "summary": "▲ 공기총 사격 연습을 한 비닐하우스강원 평창에서 공기총 사격 연습을 하다가 지나가던 주민을 맞혀 숨지게 한 60대 남성에 대해 경찰…",
-  "ts": "2026-11-22T22:14:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857982&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "중국 기술주 5개월 새 2천3백조 원 증발…당국, 증시 부양 나서",
-  "summary": "▲ 중국 증권사의 주식 시황판지난 6월 말 이후 중국 기술주 지수 3곳에서 사라진 시가총액이 1조 7천억 달러, 우리 돈 2천3백조 …",
-  "ts": "2026-11-22T22:39:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857980&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "엔비디아 칩 중국 우회 밀수망…\"젠슨 황 연인·캄보디아 범죄조직 얽혀\"",
-  "summary": "▲ 젠슨 황 엔비디아 전 최고경영자미국의 수출 통제를 피해 엔비디아의 AI 칩을 중국으로 들여온 거래망에, 젠슨 황 엔비디아 전 최고…",
-  "ts": "2026-11-22T22:33:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857977&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "김정은, 러시아대사 신임장 직접 접수…30여 년 만의 의전 변화",
-  "summary": "▲ 북러 수교 78주년 연회서 연설하는 주북 러시아대사김정은 북한 국무위원장이 북한 주재 러시아 대사로부터 직접 신임장을 받았습니다.…",
-  "ts": "2026-11-22T22:15:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008857987&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "이란, 바레인 정유시설 섬 공습…\"2명 부상\"",
-  "summary": "▲ 21일 바레인 시트라의 한 민간 시설에서 바레인 당국이 이란의 소행이라고 밝힌 공격 이후 화재가 발생해 불길이 치솟고 있다.바레인…",
-  "ts": "2026-11-22T23:56:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008858023&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "리비아서 러시아 군함 피격…\"우크라이나 드론 추정\"",
@@ -4774,5 +4744,23 @@
   "title": "빗물 흡수하는 '스펀지 시티'…중국의 '녹색 굴기'",
   "summary": "중국이 친환경 도시 건설에 속도를 내고 있습니다. 빗물을 모아 수자원으로 활용하는 이른바 스펀지 시티 조성부터, 태양광 발전 시설까지, 대규모 투자에 나서는 모양새입니다.한상우 특파원이 현장 취재했습니다.",
   "ts": "2026-11-25T21:16:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008862894&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "[뉴스토리 10분요약] 도심 곳곳 우후죽순 마라톤…열풍에 가려진 그늘",
+  "summary": "‘러닝 인구 천만 시대!’ 올해 연말까지 예정된 마라톤 대회는 600여 개로 지난 5년 사이 두 배 이상 늘었다. 러닝 열풍에 마라톤 대회는 빠르게 늘고 있지만, 지난 10월 20대 여성이 결승선을 500m 앞두고 쓰러져 숨지는 등 안전관리와 현장운영은 그 속도를 따라가지 못하고 있다.",
+  "ts": "2026-11-25T23:01:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863768&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "러 \"연료시장 상황 긴박…휘발유 수출 금지 연장 검토\"",
+  "summary": "▲ 러시아 정유소가 우크라이나 공습에 불타는 모습 우크라이나의 계속된 정유시설 공격으로 러시아의 연료난이 장기화하는 모습입니다.현지시…",
+  "ts": "2026-11-25T23:17:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008863732&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미 USTR \"한국·일본·EU 등 관세 15% 상한 유지\"",
+  "summary": "▲ 제이미슨 그리어 미국 무역대표부 대표미국 무역대표부가 한국과 중국, 일본, 유럽연합 등 14개 경제주체를 대상으로 '과잉생…",
+  "ts": "2026-11-25T23:22:00+09:00"
  }
 }
