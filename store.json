@@ -1,16 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859898&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[글로벌 마켓시황] '젠슨 황 복귀' 엔비디아 폭등…지수 회복",
-  "summary": "먼저 뉴욕증시부터 살펴보겠습니다.뉴욕 증시 3대 지수가 일제히 급등했습니다.나스닥은 6.5%, S&P500은 4.7%, 다우지수는 3%대 상승하…",
-  "ts": "2026-11-24T07:43:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859910&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "'AI 안경' 없이 '깔깔'…서울의대생 실력검증 '화제'",
-  "summary": "이렇게 AI 부정행위 논란이 이어지는 가운데 서울대 의대생들이 직접 카메라 앞에 섰다는데요.대체 뭘 보여주려고 한 건가요?지난 21일 '…",
-  "ts": "2026-11-24T07:43:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859913&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "'덩실덩실' 영상 퍼지자…일본서 쏟아진 비판",
@@ -4888,5 +4876,35 @@
   "title": "추수감사절 덮친 폭풍…정전에 비행기 결항까지",
   "summary": "미국 최대 명절인 추수감사절에 강풍을 동반한 폭우가 미 동부 지역을 덮쳤습니다. 55만 곳에서 전기가 끊기고, 결항되는 비행편도 잇따르는 등 피해가 이어졌습니다.박찬범 기자의 보도입니다.",
   "ts": "2026-11-27T07:12:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865991&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "법관 집단 반발에…민주 \"탄핵 대상, 조희대 대법원장뿐\"",
+  "summary": "법관들의 집단 반발 움직임 속에, 민주당이 탄핵의 대상은 사법부 전체가 아닌 조희대 대법원장 한 사람이라고 강조했습니다. 시민사회로 탄핵 추진 연대를 확장하겠다는 방침도 내세웠습니다.전연남 기자의 보도입니다.",
+  "ts": "2026-11-27T07:48:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865898&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "텀블러 '소변' 마시고 응급실행…피해 학생만 자퇴",
+  "summary": "경남 김해의 한 고등학교에서 남학생이 같은 반 여학생의 텀블러에 몰래 소변을 넣은 사건이 벌어졌는데, 정작 피해 학생이 학교를 떠나 논란이 일고…",
+  "ts": "2026-11-27T07:48:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865897&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "올해 수능 만점자 최소 3명…\"신원 공개 안 해요\"",
+  "summary": "올해 수능 가채점에서 만점자가 최소 3명 나온 것으로 파악됐는데요. 예년과 달리 정작 만점자들이 신원 공개를 원하지 않는다고요?교육전문매체에 따…",
+  "ts": "2026-11-27T07:44:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865896&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"선 넘었다\"…공중화장실 곳곳 하얗게 '덕지덕지'",
+  "summary": "어린이 놀이터 공중화장실에서 학생들이 벌인 장난 때문에 한 시민이 결국 직접 청소까지 했다고요?어제 SNS에는 젖은 휴지 뭉치로 엉망이 된 한 …",
+  "ts": "2026-11-27T07:42:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865895&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "\"멘사도 못 열어\"…김치통 놓고 120만 명 '끙끙'",
+  "summary": "'김치통 하나 여는데 120만 명이 머리를 맞댔다'. 이게 무슨 일인가요?지난 24일 SNS에는 \"김치통을 못 열고 있다.",
+  "ts": "2026-11-27T07:39:00+09:00"
  }
 }
