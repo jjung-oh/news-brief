@@ -1,22 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859862&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "벨기에 노동자 긴축 반대 총파업…관제사 가세에 하늘길 마비",
-  "summary": "▲ 23일 벨기에 브뤼셀에서 열린 긴축 정책 항의 시위 중 불붙은 차량 근처에 경찰들이 배치되어 있다.벨기에 노동자들이 현지시간 23…",
-  "ts": "2026-11-24T02:10:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859861&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "독일 메르츠 총리 \"2008년 우크라 나토 가입 막은 건 실수\"",
-  "summary": "▲ 마르크 뤼터 나토 사무총장과 프리드리히 메르츠 독일 총리프리드리히 메르츠 독일 총리가 2008년 우크라이나를 북대서양조약기구 회원…",
-  "ts": "2026-11-24T02:04:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859860&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "미 민주, 젠슨황 복귀에 \"트럼프, 안보 팔아넘겨…불법행위 조사할 것\"",
-  "summary": "▲ 젠슨 황 엔비디아 최고경영자와 도널드 트럼프 미국 대통령현지시간 23일 젠슨 황의 엔비디아 최고경영자 복귀 소식에 미국 워싱턴 D…",
-  "ts": "2026-11-24T02:02:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859892&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "'엔비디아 CEO 후보 거론' 하스, 2033년까지 Arm CEO로",
@@ -58,12 +40,6 @@
   "title": "이집트 중학교 2곳에 한국어 정규 수업 첫 개설",
   "summary": "▲ 한국어 교육 과정에 개설된 알-로야 외국어학교를 찾은 김완중 대사이집트 현지 중학교 2곳에 한국어 정규 수업이 개설됐다고 주이집트…",
   "ts": "2026-11-24T02:56:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859876&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "네타냐후 \"정치적 이유로 안보위협 축소\"…거국내각 요구",
-  "summary": "▲ 베냐민 네타냐후 이스라엘 총리베냐민 네타냐후 이스라엘 총리가 정치적 이유로 안보 위협을 축소하고 있다며 정적들을 비난하고 거국일치…",
-  "ts": "2026-11-24T02:52:00+09:00"
  },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859920&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
@@ -4954,5 +4930,11 @@
   "title": "프랑스 국민배우 드파르디외, 여배우 성폭행 혐의로 법정행",
   "summary": "▲ 프랑스 국민배우 제라르 드파르디외프랑스 국민배우 제라르 드파르디외가 여배우 성폭행 혐의로 법정에 설 예정입니다.현지시간 어제, A…",
   "ts": "2026-11-27T01:38:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865868&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미국 추수감사절 덮친 폭풍에 30만 곳 정전…항공편 수백 편 결항",
+  "summary": "▲ 26일 추수감사절 아침, 폭우로 침수된 미국 버지니아주 거리를 카약으로 이동하고 있다.미국 최대 명절 중 하나인 추수감사절인 어제…",
+  "ts": "2026-11-27T02:10:00+09:00"
  }
 }
