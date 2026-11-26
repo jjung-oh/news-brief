@@ -1,34 +1,4 @@
 {
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859793&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "'전자발찌 훼손' 56살 정영모 세종서 검거",
-  "summary": "▲ '전자발찌 훼손' 성범죄자 정영모전자발찌를 훼손하고 달아난 성범죄자 56살 정영모 씨가 검거됐습니다.법무부는 오늘 …",
-  "ts": "2026-11-23T23:37:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859797&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[속보] 엔비디아, 젠슨 황 CEO 복귀에 30% 넘게 급등 출발",
-  "summary": "▲ 엔비디아엔비디아, 젠슨 황 CEO 복귀에 30% 넘게 급등 출발",
-  "ts": "2026-11-23T23:42:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859777&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "\"EU, 광범위 사이버 공격 배후로 중국 연계 해킹 조직 의심\"",
-  "summary": "▲ 유럽연합 깃발유럽연합이 최근 불거진 EU 집행위원회 전산 시스템에 대한 광범위한 사이버 공격의 배후에 중국의 지원을 받는 해킹 조…",
-  "ts": "2026-11-23T23:10:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859774&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "[속보] 젠슨 황, 엔비디아 CEO로 11일만에 복귀",
-  "summary": "▲ 젠슨 황젠슨 황이 오늘로 복귀했습니다.엔비디아는 이사회에서 젠슨 황의 CEO 복귀 안건을 만장일치로 의결했으며, 그의 복귀에 국가…",
-  "ts": "2026-11-23T23:39:00+09:00"
- },
- "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859766&plink=RSSLINK&cooper=RSSREADER": {
-  "source": "SBS",
-  "title": "모사드 전 국장 \"여건 허락하는 즉시 이란과 전쟁 재개해야\"",
-  "summary": "▲ 다비드 바르니아 전 모사드 국장지난 6월 퇴임한 이스라엘 해외정보국 모사드 전 국장이 여건이 허락하는 즉시 이란을 상대로 전쟁을 …",
-  "ts": "2026-11-23T22:13:00+09:00"
- },
  "https://news.sbs.co.kr/news/endPage.do?news_id=N1008859807&plink=RSSLINK&cooper=RSSREADER": {
   "source": "SBS",
   "title": "'자주파' 안보라인 전격 교체…한미 관계 고려?",
@@ -4978,5 +4948,29 @@
   "title": "집채만 한 파도에 \"정말 드문 일\"…최대 고비 더 남았다",
   "summary": "미국 서부의 캘리포니아 해안 곳곳이 물바다가 됐습니다. '킹 타이드'라고 불리는 높은 만조에 파도까지 휘몰아쳐, 부두가 무너지고 주택들이 침수됐습니다.김영아 기자의 보도입니다.",
   "ts": "2026-11-26T21:10:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865819&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "우크라 정보당국 \"북한, 러 군사 지원 일시 중단\" 주장",
+  "summary": "▲ 러시아 파병 북한군우크라이나 정보 당국이 현지시간 오늘 북한이 '남북 긴장 완화'를 언급한 러시아 외교 당국자의 발…",
+  "ts": "2026-11-26T23:35:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865818&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "미 불법체류자 100만 달러 복권 당첨됐는데 체포…추방 위기",
+  "summary": "▲ 미국 이민당국 체포된 100만 달러 복권 당첨자미국에서 100만 달러짜리 복권에 당첨된 한 남성이 불법 체류자로 이민세관단속국에 …",
+  "ts": "2026-11-26T23:33:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865811&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "한강 '작별하지 않는다', 연극으로 이탈리아 무대 오른다",
+  "summary": "▲ 한강 '작별하지 않는다'를 원작으로 제작된 이탈리아 연극노벨문학상 수상자인 한강 작가의 장편소설 '작별하지 …",
+  "ts": "2026-11-26T22:51:00+09:00"
+ },
+ "https://news.sbs.co.kr/news/endPage.do?news_id=N1008865810&plink=RSSLINK&cooper=RSSREADER": {
+  "source": "SBS",
+  "title": "중국 대사, 북한 평안북도 인민위원장 면담…교류 강화 논의",
+  "summary": "▲ 왕야쥔 북한 주재 중국대사왕야쥔 북한 주재 중국대사가 최영만 북한 평안북도 인민위원회 위원장과 만나 북중 접경지역 간 교류·협력 …",
+  "ts": "2026-11-26T22:48:00+09:00"
  }
 }
